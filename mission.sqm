@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1206;
+		nextID=1210;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12579.104,9.2554712,12622.014};
-		dir[]={-0.77851987,-0.31875572,0.54071844};
-		up[]={-0.26184455,0.94781607,0.18186331};
-		aside[]={0.57047105,-1.670167e-006,0.8213563};
+		pos[]={7923.2446,33.562592,11024.237};
+		dir[]={0.097154222,-0.18995561,0.97703433};
+		up[]={0.018797997,0.98178548,0.18905362};
+		aside[]={0.99514627,1.4185207e-007,-0.098954216};
 	};
 };
 binarizationWanted=0;
@@ -37,7 +37,6 @@ addons[]=
 	"asr_ai3_skills",
 	"A3_Structures_F_Items_Luggage",
 	"cba_xeh",
-	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Weapons_F",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_explosives",
@@ -60,7 +59,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=19;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -98,100 +97,93 @@ class AddonsMetaData
 		};
 		class Item5
 		{
-			className="A3_Structures_F_EPC";
-			name="Arma 3 Win Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item6
-		{
 			className="A3_Supplies_F_Exp";
 			name="Arma 3 Apex - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item6
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item8
+		class Item7
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item9
+		class Item8
 		{
 			className="ace_rearm";
 			name="ACE3 - Rearm";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item10
+		class Item9
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item11
+		class Item10
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item11
 		{
 			className="A3_Armor_F_Beta";
 			name="Arma 3 Beta - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item12
 		{
 			className="A3_Structures_F_Ind";
 			name="Arma 3 - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item13
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item14
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item15
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item16
 		{
 			className="gsri_headgear";
 			name="gsri_headgear";
 			author="[-GSRI-]Seenri";
 		};
-		class Item18
+		class Item17
 		{
 			className="VSM_G2_Config";
 			name="VSM_G2_Config";
 		};
-		class Item19
+		class Item18
 		{
 			className="milgp_headgear_cfg";
 			name="milgp_headgear_cfg";
@@ -211,6 +203,10 @@ class ScenarioData
 	author="Lisitius, Cheitan";
 	overviewText="Départ en mission iminent, regroupez-vous et attendez les ordres.";
 	overViewPicture="images\iconeserveur.jpg";
+	briefing=0;
+	debriefing=0;
+	saving=0;
+	forceRotorLibSimulation=1;
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -21283,6 +21279,25 @@ class CustomAttributes
 		};
 		class Attribute1
 		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute2
+		{
 			property="cba_settings_hasSettingsFile";
 			expression="false";
 			class Value
@@ -21300,7 +21315,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=3;
 	};
 };
 class Mission
@@ -29097,403 +29112,8 @@ class Mission
 					name="Cancon";
 					class Entities
 					{
-						items=12;
+						items=1;
 						class Item0
-						{
-							dataType="Marker";
-							position[]={5405.5679,0,2905.811};
-							name="dwnlcan";
-							text="Telechargement donnée";
-							markerType="ELLIPSE";
-							type="ellipse";
-							colorName="ColorRed";
-							alpha=0.5;
-							fillName="SolidBorder";
-							a=100;
-							b=100;
-							drawBorder=1;
-							id=680;
-							atlOffset=-46.706665;
-						};
-						class Item1
-						{
-							dataType="Marker";
-							position[]={5425.1118,0,2990.2319};
-							name="dwnl1can";
-							type="Empty";
-							id=675;
-							atlOffset=-51.82;
-						};
-						class Item2
-						{
-							dataType="Marker";
-							position[]={5467.4888,0,2857.1321};
-							name="dwnl2can";
-							type="Empty";
-							id=676;
-							atlOffset=-43.804543;
-						};
-						class Item3
-						{
-							dataType="Marker";
-							position[]={5368.7202,0,2837.418};
-							name="dwnl3can";
-							type="Empty";
-							id=677;
-							atlOffset=-43.083996;
-						};
-						class Item4
-						{
-							dataType="Marker";
-							position[]={5323.0869,0,2873.2471};
-							name="dwnl4can";
-							type="Empty";
-							id=678;
-							atlOffset=-42.860886;
-						};
-						class Item5
-						{
-							dataType="Marker";
-							position[]={5433.4302,0,2831.0359};
-							name="dwnl5can";
-							type="Empty";
-							id=679;
-							atlOffset=-43.194828;
-						};
-						class Item6
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={5405.4712,46.705643,2905.821};
-								angles[]={6.1930218,0,0.020001473};
-							};
-							id=671;
-							type="ModuleTaskCreate_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ModuleTaskCreate_F_Destination";
-									expression="_this setVariable ['Destination',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ModuleTaskCreate_F_Type";
-									expression="_this setVariable ['Type',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="download";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="ModuleTaskCreate_F_ShowNotification";
-									expression="_this setVariable ['ShowNotification',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="ModuleTaskCreate_F_Marker";
-									expression="_this setVariable ['Marker',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
-										};
-									};
-								};
-								class Attribute4
-								{
-									property="ModuleTaskCreate_F_Title";
-									expression="_this setVariable ['Title',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Donwload data !";
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="ModuleTaskCreate_F_Description";
-									expression="_this setVariable ['Description',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Trouver l'objet inconnu et télécharger ces données";
-										};
-									};
-								};
-								class Attribute6
-								{
-									property="ModuleTaskCreate_F_ID";
-									expression="_this setVariable ['ID',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="task01";
-										};
-									};
-								};
-								class Attribute7
-								{
-									property="ModuleTaskCreate_F_AlwaysVisible";
-									expression="_this setVariable ['AlwaysVisible',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute8
-								{
-									property="ModuleTaskCreate_F_Owner";
-									expression="_this setVariable ['Owner',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=4;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ModuleTaskCreate_F_State";
-									expression="_this setVariable ['State',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="CREATED";
-										};
-									};
-								};
-								class Attribute10
-								{
-									property="ModuleTaskCreate_F_IDParent";
-									expression="_this setVariable ['IDParent',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
-										};
-									};
-								};
-								nAttributes=11;
-							};
-						};
-						class Item7
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={5407.3062,46.646851,2904.7649};
-								angles[]={6.1930218,0,0.020001473};
-							};
-							id=672;
-							type="ModuleTaskSetState_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ModuleTaskSetState_F_ShowNotification";
-									expression="_this setVariable ['ShowNotification',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ModuleTaskSetState_F_State";
-									expression="_this setVariable ['State',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="SUCCEEDED";
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item8
-						{
-							dataType="Trigger";
-							position[]={5427.3145,47.809219,2911.9895};
-							class Attributes
-							{
-								condition="call{laptop01 getVariable [ ""T8L_pvar_dataDownloaded"", false ]}";
-								onActivation="call{hint ""Laptop01 - telechargement fini""}";
-								sizeA=0;
-								sizeB=0;
-								interuptable=1;
-							};
-							id=668;
-							type="EmptyDetector";
-						};
-						class Item9
-						{
-							dataType="Trigger";
-							position[]={5427.7031,48.036747,2914.4912};
-							class Attributes
-							{
-								condition="call{laptop01 getVariable [ ""T8L_pvar_inUse"", false ]}";
-								onActivation="hint ""Laptop01 in use!""";
-								sizeA=0;
-								sizeB=0;
-								interuptable=1;
-								repeatable=1;
-							};
-							id=669;
-							type="EmptyDetector";
-						};
-						class Item10
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={5429.751,50.322746,2935.2073};
-								angles[]={6.2200704,4.7654643,0.015998369};
-							};
-							side="Empty";
-							flags=4;
-							randomStartPositions[]=
-							{
-								"dwnl1can",
-								"dwnl2can",
-								"dwnl5can",
-								"dwnl3can",
-								"dwnl4can"
-							};
-							class Attributes
-							{
-								name="laptop01";
-							};
-							id=673;
-							type="Land_Device_assembled_F";
-						};
-						class Item11
 						{
 							dataType="Layer";
 							name="Otage";
@@ -32301,17 +31921,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12576.508,7.8570814,12620.149};
-						angles[]={-0,3.804714,0};
+						position[]={12576.508,7.8572083,12620.149};
+						angles[]={0,3.804713,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						init="call{this enablesimulation false;     " \n "this allowDamage false;     " \n "this setObjectTexture [0, ""images\preslots.jpg""];      " \n "this addAction [""<t color='#decc88' size='1.3'>Basique</t>"",""preslots\Basique.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>Grenadier</t>"",""preslots\Grenadier.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>Medic</t>"",""preslots\Medic.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>MG</t>"",""preslots\MG.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>Nageur de combat</t>"",""preslots\Plongeur.sqf""]; " \n "_ammo = [] execVM ""equipmentbox.sqf"";}";
+						init="call{this enablesimulation false;     " \n "this allowDamage false;     " \n "this setObjectTexture [0, ""images\preslots.jpg""];      " \n "this addAction [""<t color='#decc88' size='1.3'>Basique</t>"",""preslots\Basique.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>Grenadier</t>"",""preslots\Grenadier.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>Medic</t>"",""preslots\Medic.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>MG</t>"",""preslots\MG.sqf""]; " \n "this addAction [""<t color='#decc88' size='1.3'>Nageur de combat</t>"",""preslots\Plongeur.sqf""];}";
 					};
 					id=1201;
 					type="Land_InfoStand_V2_F";
+					atlOffset=0.00012683868;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32393,6 +32014,7 @@ class Mission
 					};
 					id=1204;
 					type="B_CargoNet_01_ammo_F";
+					atlOffset=0.00042057037;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -32456,7 +32078,7 @@ class Mission
 				};
 			};
 			id=1;
-			atlOffset=67.274025;
+			atlOffset=67.247032;
 		};
 		class Item4
 		{
@@ -33645,11 +33267,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=81;
+			nextID=75;
 		};
 		class Links
 		{
-			items=81;
+			items=75;
 			class Item0
 			{
 				linkID=0;
@@ -34033,28 +33655,28 @@ class Mission
 			class Item38
 			{
 				linkID=38;
-				item0=672;
-				item1=668;
+				item0=683;
+				item1=688;
 				class CustomData
 				{
-					type="Sync";
+					type="RandomStart";
 				};
 			};
 			class Item39
 			{
 				linkID=39;
-				item0=672;
-				item1=671;
+				item0=683;
+				item1=685;
 				class CustomData
 				{
-					type="Sync";
+					type="RandomStart";
 				};
 			};
 			class Item40
 			{
 				linkID=40;
-				item0=673;
-				item1=675;
+				item0=683;
+				item1=684;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34063,8 +33685,8 @@ class Mission
 			class Item41
 			{
 				linkID=41;
-				item0=673;
-				item1=676;
+				item0=683;
+				item1=687;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34073,8 +33695,8 @@ class Mission
 			class Item42
 			{
 				linkID=42;
-				item0=673;
-				item1=679;
+				item0=683;
+				item1=686;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34083,28 +33705,28 @@ class Mission
 			class Item43
 			{
 				linkID=43;
-				item0=673;
-				item1=677;
+				item0=689;
+				item1=683;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item44
 			{
 				linkID=44;
-				item0=673;
-				item1=678;
+				item0=704;
+				item1=703;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item45
 			{
 				linkID=45;
-				item0=683;
-				item1=688;
+				item0=703;
+				item1=708;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34113,8 +33735,8 @@ class Mission
 			class Item46
 			{
 				linkID=46;
-				item0=683;
-				item1=685;
+				item0=703;
+				item1=716;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34123,8 +33745,8 @@ class Mission
 			class Item47
 			{
 				linkID=47;
-				item0=683;
-				item1=684;
+				item0=727;
+				item1=730;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34133,8 +33755,8 @@ class Mission
 			class Item48
 			{
 				linkID=48;
-				item0=683;
-				item1=687;
+				item0=727;
+				item1=728;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34143,8 +33765,8 @@ class Mission
 			class Item49
 			{
 				linkID=49;
-				item0=683;
-				item1=686;
+				item0=727;
+				item1=729;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34153,8 +33775,8 @@ class Mission
 			class Item50
 			{
 				linkID=50;
-				item0=689;
-				item1=683;
+				item0=733;
+				item1=732;
 				class CustomData
 				{
 					type="Sync";
@@ -34163,8 +33785,8 @@ class Mission
 			class Item51
 			{
 				linkID=51;
-				item0=704;
-				item1=703;
+				item0=732;
+				item1=727;
 				class CustomData
 				{
 					type="Sync";
@@ -34173,18 +33795,18 @@ class Mission
 			class Item52
 			{
 				linkID=52;
-				item0=703;
-				item1=708;
+				item0=731;
+				item1=733;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item53
 			{
 				linkID=53;
-				item0=703;
-				item1=716;
+				item0=737;
+				item1=742;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34193,8 +33815,8 @@ class Mission
 			class Item54
 			{
 				linkID=54;
-				item0=727;
-				item1=730;
+				item0=737;
+				item1=743;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34203,8 +33825,8 @@ class Mission
 			class Item55
 			{
 				linkID=55;
-				item0=727;
-				item1=728;
+				item0=737;
+				item1=745;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34213,8 +33835,8 @@ class Mission
 			class Item56
 			{
 				linkID=56;
-				item0=727;
-				item1=729;
+				item0=737;
+				item1=744;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34223,8 +33845,8 @@ class Mission
 			class Item57
 			{
 				linkID=57;
-				item0=733;
-				item1=732;
+				item0=746;
+				item1=737;
 				class CustomData
 				{
 					type="Sync";
@@ -34233,8 +33855,8 @@ class Mission
 			class Item58
 			{
 				linkID=58;
-				item0=732;
-				item1=727;
+				item0=747;
+				item1=746;
 				class CustomData
 				{
 					type="Sync";
@@ -34243,8 +33865,8 @@ class Mission
 			class Item59
 			{
 				linkID=59;
-				item0=731;
-				item1=733;
+				item0=748;
+				item1=747;
 				class CustomData
 				{
 					type="Sync";
@@ -34253,8 +33875,8 @@ class Mission
 			class Item60
 			{
 				linkID=60;
-				item0=737;
-				item1=742;
+				item0=766;
+				item1=769;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34263,8 +33885,8 @@ class Mission
 			class Item61
 			{
 				linkID=61;
-				item0=737;
-				item1=743;
+				item0=766;
+				item1=770;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34273,8 +33895,8 @@ class Mission
 			class Item62
 			{
 				linkID=62;
-				item0=737;
-				item1=745;
+				item0=766;
+				item1=771;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34283,8 +33905,8 @@ class Mission
 			class Item63
 			{
 				linkID=63;
-				item0=737;
-				item1=744;
+				item0=766;
+				item1=772;
 				class CustomData
 				{
 					type="RandomStart";
@@ -34293,18 +33915,18 @@ class Mission
 			class Item64
 			{
 				linkID=64;
-				item0=746;
-				item1=737;
+				item0=766;
+				item1=773;
 				class CustomData
 				{
-					type="Sync";
+					type="RandomStart";
 				};
 			};
 			class Item65
 			{
 				linkID=65;
-				item0=747;
-				item1=746;
+				item0=775;
+				item1=766;
 				class CustomData
 				{
 					type="Sync";
@@ -34313,8 +33935,8 @@ class Mission
 			class Item66
 			{
 				linkID=66;
-				item0=748;
-				item1=747;
+				item0=776;
+				item1=775;
 				class CustomData
 				{
 					type="Sync";
@@ -34323,58 +33945,58 @@ class Mission
 			class Item67
 			{
 				linkID=67;
-				item0=766;
-				item1=769;
+				item0=774;
+				item1=776;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item68
 			{
 				linkID=68;
-				item0=766;
-				item1=770;
+				item0=690;
+				item1=689;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item69
 			{
 				linkID=69;
-				item0=766;
-				item1=771;
+				item0=706;
+				item1=704;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item70
 			{
 				linkID=70;
-				item0=766;
-				item1=772;
+				item0=705;
+				item1=704;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item71
 			{
 				linkID=71;
-				item0=766;
-				item1=773;
+				item0=705;
+				item1=707;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item72
 			{
 				linkID=72;
-				item0=775;
-				item1=766;
+				item0=690;
+				item1=870;
 				class CustomData
 				{
 					type="Sync";
@@ -34383,8 +34005,8 @@ class Mission
 			class Item73
 			{
 				linkID=73;
-				item0=776;
-				item1=775;
+				item0=706;
+				item1=871;
 				class CustomData
 				{
 					type="Sync";
@@ -34393,68 +34015,8 @@ class Mission
 			class Item74
 			{
 				linkID=74;
-				item0=774;
-				item1=776;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item75
-			{
-				linkID=75;
-				item0=690;
-				item1=689;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item76
-			{
-				linkID=76;
-				item0=706;
-				item1=704;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item77
-			{
-				linkID=77;
-				item0=705;
-				item1=704;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item78
-			{
-				linkID=78;
-				item0=705;
-				item1=707;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item79
-			{
-				linkID=79;
-				item0=690;
-				item1=870;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item80
-			{
-				linkID=80;
-				item0=706;
-				item1=871;
+				item0=639;
+				item1=641;
 				class CustomData
 				{
 					type="Sync";

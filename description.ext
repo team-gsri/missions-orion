@@ -1,6 +1,3 @@
-//download data //
-#include "downloadData.hpp"
-
 //ATM airdrop
 #include "ATM_airdrop\dialog.hpp"
 class CfgSounds {
