@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1212;
+		nextID=1213;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=958;
+		nextID=976;
 	};
 	class Camera
 	{
-		pos[]={12617.942,12.257566,12581.619};
-		dir[]={-0.68301666,-0.24231543,0.68921965};
-		up[]={-0.17060265,0.97020084,0.17215595};
-		aside[]={0.7104041,-9.2186383e-009,0.70400459};
+		pos[]={12599.808,17.839954,12597.549};
+		dir[]={-0.65481895,-0.53926075,0.52977508};
+		up[]={-0.4192428,0.84215271,0.33918789};
+		aside[]={0.62906653,1.4441321e-006,0.77754152};
 	};
 };
 binarizationWanted=0;
@@ -26976,7 +26976,6 @@ class Mission
 										angles[]={0,2.494442,6.2817187};
 									};
 									side="Empty";
-									flags=4;
 									randomStartPositions[]=
 									{
 										"objcaaero1",
@@ -26991,7 +26990,7 @@ class Mission
 									};
 									id=571;
 									type="O_supplyCrate_F";
-									atlOffset=0.00047302246;
+									atlOffset=3.8440018;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27323,6 +27322,7 @@ class Mission
 									};
 									id=579;
 									type="ModuleTaskSetState_F";
+									atlOffset=0.13591003;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27400,6 +27400,7 @@ class Mission
 									};
 									id=607;
 									type="ModuleTaskCreate_F";
+									atlOffset=0.31522751;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27682,7 +27683,7 @@ class Mission
 												angles[]={0,2.7164304,0};
 											};
 											side="East";
-											flags=7;
+											flags=3;
 											randomStartPositions[]=
 											{
 												"objoffaero3",
@@ -27696,7 +27697,7 @@ class Mission
 											};
 											id=598;
 											type="O_officer_F";
-											atlOffset=0.0003452301;
+											atlOffset=0.32500076;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -27764,7 +27765,7 @@ class Mission
 									{
 									};
 									id=597;
-									atlOffset=0.0003452301;
+									atlOffset=0.32500076;
 								};
 								class Item4
 								{
@@ -31600,18 +31601,19 @@ class Mission
 			name="GSRI : Modules";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={12593.806,15.227066,12602.413};
+						position[]={12593.806,15.227364,12602.413};
 					};
-					name="HC";
+					name="hc1";
 					isPlayable=1;
 					id=1210;
 					type="HeadlessClient_F";
+					atlOffset=0.00029754639;
 				};
 				class Item1
 				{
@@ -31723,9 +31725,23 @@ class Mission
 						nAttributes=5;
 					};
 				};
+				class Item2
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12594.056,15.226517,12602.932};
+						angles[]={0.0022689279,0,0.0027052604};
+					};
+					name="hc2";
+					isPlayable=1;
+					id=1212;
+					type="HeadlessClient_F";
+					atlOffset=6.4262753;
+				};
 			};
 			id=779;
-			atlOffset=114.07436;
+			atlOffset=8.6784363e-005;
 		};
 		class Item3
 		{
@@ -31961,7 +31977,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12577.017,7.857079,12619.703};
-						angles[]={-0,3.804713,0};
+						angles[]={0,3.804713,0};
 					};
 					side="Empty";
 					flags=4;
