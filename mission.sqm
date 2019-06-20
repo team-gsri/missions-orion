@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=879;
+		nextID=905;
 	};
 	class Camera
 	{
-		pos[]={756.44159,46.992249,12149.406};
-		dir[]={0.68169588,-0.57062912,-0.45807123};
-		up[]={0.4736678,0.82118386,-0.31828731};
-		aside[]={-0.5577839,1.3285244e-006,-0.83008564};
+		pos[]={729.75409,45.184872,12215.011};
+		dir[]={0.47878334,-0.38957569,-0.78691465};
+		up[]={0.20253119,0.92096162,-0.33287889};
+		aside[]={-0.85439777,1.156237e-006,-0.51984215};
 	};
 };
 binarizationWanted=0;
@@ -34,6 +34,7 @@ addons[]=
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Modules_F_Intel",
 	"A3_Characters_F",
+	"asr_ai3_skills",
 	"A3_Structures_F_Items_Luggage",
 	"cba_xeh",
 	"A3_Structures_F_EPC_Items_Electronics",
@@ -57,6 +58,7 @@ addons[]=
 	"ace_interaction",
 	"ace_cargo",
 	"A3_Structures_F_Mark_Items_Military",
+	"r_unfold",
 	"A3_Props_F_Argo_Civilian_InfoBoards",
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Props_F_Exp_A_Military_Equipment",
@@ -72,6 +74,7 @@ addons[]=
 	"UK3CB_BAF_Vehicles_Coyote_Jackal",
 	"A3_Structures_F_Exp_Infrastructure_Airports",
 	"A3_Soft_F_Gamma_Truck_01",
+	"A3_Soft_F_Exp_Truck_01",
 	"UK3CB_BAF_Vehicles_Merlin",
 	"A3_Structures_F_Mil_Helipads",
 	"UK3CB_BAF_Vehicles_LandRover",
@@ -85,7 +88,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=41;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -242,120 +245,126 @@ class AddonsMetaData
 		};
 		class Item22
 		{
+			className="r_unfold";
+			name="r_unfold";
+			author="Rallen";
+		};
+		class Item23
+		{
 			className="A3_Props_F_Argo";
 			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item25
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item26
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item27
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Air_F_Orange";
 			name="Arma 3 Orange - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="plp_containers";
 			name="plp_containers";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="UK3CB_BAF_Vehicles_Coyote_Jackal";
 			name="3CB BAF Vehicles - Coyote and Jackal";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item32
+		class Item33
 		{
 			className="A3_Structures_F_Exp_Infrastructure";
 			name="Arma 3 Apex - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item33
-		{
-			className="UK3CB_BAF_Vehicles_Merlin";
-			name="3CB BAF Vehicles - Merlin";
-			author="3 Commando Brigade";
-			url="www.3commandobrigade.com";
-		};
 		class Item34
-		{
-			className="UK3CB_BAF_Vehicles_LandRover";
-			name="3CB BAF Vehicles - Land Rover";
-			author="3 Commando Brigade";
-			url="www.3commandobrigade.com";
-		};
-		class Item35
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item35
+		{
+			className="UK3CB_BAF_Vehicles_Merlin";
+			name="3CB BAF Vehicles - Merlin";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
 		class Item36
+		{
+			className="UK3CB_BAF_Vehicles_LandRover";
+			name="3CB BAF Vehicles - Land Rover";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item37
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item37
+		class Item38
 		{
 			className="MELB";
 			name="MELB";
 			author="S.A.S.S.";
 		};
-		class Item38
+		class Item39
 		{
 			className="gsri_beret";
 			name="gsri_beret";
 			author="GSRI";
 		};
-		class Item39
+		class Item40
 		{
 			className="VSM_G2_Config";
 			name="VSM_G2_Config";
@@ -21464,7 +21473,7 @@ class CustomAttributes
 							"BOOL"
 						};
 					};
-					value=1;
+					value=0;
 				};
 			};
 		};
@@ -27126,7 +27135,6 @@ class Mission
 										angles[]={0,2.494442,6.2817187};
 									};
 									side="Empty";
-									flags=4;
 									randomStartPositions[]=
 									{
 										"objcaaero1",
@@ -27141,7 +27149,7 @@ class Mission
 									};
 									id=571;
 									type="O_supplyCrate_F";
-									atlOffset=0.00047302246;
+									atlOffset=3.8440018;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27473,6 +27481,7 @@ class Mission
 									};
 									id=579;
 									type="ModuleTaskSetState_F";
+									atlOffset=0.13591003;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27550,6 +27559,7 @@ class Mission
 									};
 									id=607;
 									type="ModuleTaskCreate_F";
+									atlOffset=0.31522751;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27832,7 +27842,7 @@ class Mission
 												angles[]={0,2.7164304,0};
 											};
 											side="East";
-											flags=7;
+											flags=3;
 											randomStartPositions[]=
 											{
 												"objoffaero3",
@@ -27846,7 +27856,7 @@ class Mission
 											};
 											id=598;
 											type="O_officer_F";
-											atlOffset=0.0003452301;
+											atlOffset=0.32500076;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -27914,7 +27924,7 @@ class Mission
 									{
 									};
 									id=597;
-									atlOffset=0.0003452301;
+									atlOffset=0.32500076;
 								};
 								class Item4
 								{
@@ -33289,7 +33299,7 @@ class Mission
 									};
 									id=537;
 									type="Land_HDMICable_01_F";
-									atlOffset=0.81294823;
+									atlOffset=0.81294632;
 								};
 								class Item1
 								{
@@ -33306,7 +33316,7 @@ class Mission
 									};
 									id=538;
 									type="Land_Camera_01_F";
-									atlOffset=0.81372643;
+									atlOffset=0.81373978;
 								};
 								class Item2
 								{
@@ -33323,7 +33333,7 @@ class Mission
 									};
 									id=539;
 									type="Land_HandyCam_F";
-									atlOffset=0.81364632;
+									atlOffset=0.81365967;
 								};
 								class Item3
 								{
@@ -33339,7 +33349,7 @@ class Mission
 									};
 									id=551;
 									type="Land_CampingChair_V2_F";
-									atlOffset=0.47200012;
+									atlOffset=0.47185707;
 								};
 								class Item4
 								{
@@ -33356,7 +33366,7 @@ class Mission
 									};
 									id=552;
 									type="Land_CampingChair_V2_F";
-									atlOffset=0.0001335144;
+									atlOffset=0.00027275085;
 								};
 								class Item5
 								{
@@ -33373,6 +33383,7 @@ class Mission
 									};
 									id=553;
 									type="Land_CampingChair_V2_F";
+									atlOffset=0.00013923645;
 								};
 								class Item6
 								{
@@ -33389,6 +33400,7 @@ class Mission
 									};
 									id=554;
 									type="Land_CampingChair_V2_F";
+									atlOffset=0.00022888184;
 								};
 								class Item7
 								{
@@ -34692,6 +34704,7 @@ class Mission
 					};
 					id=824;
 					type="Land_InfoStand_V2_F";
+					atlOffset=-0.0080661774;
 					class CustomAttributes
 					{
 						class Attribute0

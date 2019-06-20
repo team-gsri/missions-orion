@@ -1,15 +1,8 @@
-#include "CHVD\dialog.hpp"
-class CfgFunctions
-{
-	#include "CHVD\CfgFunctions.hpp"
-};
-
-author="[-GSRI-] Lisitius";
+author="[-GSRI-] Lisitius, edit by [-GSRI-] Cheitan";
 OnLoadName = "Orion_Malden";
 OnLoadMission = "Rejoignez-nous sur Teamspeak : ts.gsri.eu et sur notre groupe steam GSRI & Friends";
 loadScreen = "images\iconeserveur.jpg";
 overviewPicture = "images\iconeserveur.jpg";
-cba_settings_hasSettingsFile = 1;
 
 respawn = "BASE";
 respawnDelay = 5;

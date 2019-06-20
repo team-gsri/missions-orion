@@ -1,4 +1,5 @@
 //Reserved Slot
+//todo zeus ?
 if (str(player) in ["p7", "p7_1", "p7_2", "p7_3","p7_4","p7_5","p7_6","p7_7"]) Then
 {
    switch (getPlayerUID(player)) do
