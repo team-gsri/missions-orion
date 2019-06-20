@@ -8,7 +8,7 @@ class EditorData
 	toggles=545;
 	class ItemIDProvider
 	{
-		nextID=1177;
+		nextID=1178;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5278.8457,182.32954,10924.616};
-		dir[]={-0.87678635,-0.27795425,0.3924464};
-		up[]={-0.25370586,0.96059245,0.11355755};
-		aside[]={0.40854344,1.6975537e-007,0.91275251};
+		pos[]={12651.922,24.676424,12591.203};
+		dir[]={-0.90576798,-0.21577719,0.36506405};
+		up[]={-0.20016076,0.97643304,0.080674708};
+		aside[]={0.37386888,6.2902109e-007,0.92759526};
 	};
 };
 binarizationWanted=0;
@@ -77,13 +77,14 @@ addons[]=
 	"A3_Soft_F_Exp_LSV_01",
 	"A3_Air_F_Exp_VTOL_01",
 	"gsri_beret",
-	"VSM_G2_Config"
+	"VSM_G2_Config",
+	"A3_Boat_F_Destroyer_Destroyer_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=36;
+		items=37;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -331,6 +332,13 @@ class AddonsMetaData
 		{
 			className="VSM_G2_Config";
 			name="VSM_G2_Config";
+		};
+		class Item36
+		{
+			className="A3_Boat_F_Destroyer";
+			name="Arma 3 Jets - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -21467,7 +21475,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			dataType="Layer";
@@ -38160,6 +38168,122 @@ class Mission
 			};
 			id=1131;
 			atlOffset=-1.9073486e-006;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12563.294,-0.00043487549,12634.335};
+				angles[]={0,2.2689281,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="normandie";
+			};
+			id=1177;
+			type="Land_Destroyer_01_base_F";
+			atlOffset=77.864998;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="CustomShipNameTexture0";
+					expression="([_this, 'Land_Destroyer_01_hull_05_F'] call bis_fnc_destroyer01GetShipPart) setObjectTextureGlobal [0, _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="images\normandie.paa";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="CustomShipFlagTexture0";
+					expression="([_this, 'ShipFlag_US_F'] call bis_fnc_destroyer01GetShipPart) setFlagTexture _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="images\drapeau_fr.jpg";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="CustomShipNumber1";
+					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 0] spawn bis_fnc_destroyer01InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=6;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="CustomShipNumber2";
+					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 1] spawn bis_fnc_destroyer01InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=5;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="CustomShipNumber3";
+					expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 	class Connections
