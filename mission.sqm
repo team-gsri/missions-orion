@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1210;
+		nextID=1212;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7923.2446,33.562592,11024.237};
-		dir[]={0.097154222,-0.18995561,0.97703433};
-		up[]={0.018797997,0.98178548,0.18905362};
-		aside[]={0.99514627,1.4185207e-007,-0.098954216};
+		pos[]={12617.942,12.257566,12581.619};
+		dir[]={-0.68301666,-0.24231543,0.68921965};
+		up[]={-0.17060265,0.97020084,0.17215595};
+		aside[]={0.7104041,-9.2186383e-009,0.70400459};
 	};
 };
 binarizationWanted=0;
@@ -29598,7 +29598,7 @@ class Mission
 						};
 					};
 					id=681;
-					atlOffset=3.3019295;
+					atlOffset=1.8567276;
 				};
 				class Item4
 				{
@@ -31592,7 +31592,7 @@ class Mission
 				};
 			};
 			id=587;
-			atlOffset=-153.75034;
+			atlOffset=-153.50687;
 		};
 		class Item2
 		{
@@ -31606,25 +31606,23 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={774.48224,214.89005,12137.613};
+						position[]={12593.806,15.227066,12602.413};
 					};
 					name="HC";
 					isPlayable=1;
-					id=880;
+					id=1210;
 					type="HeadlessClient_F";
-					atlOffset=185.97005;
 				};
 				class Item1
 				{
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={797.13397,28.927706,12130.331};
+						position[]={12590.072,15.222357,12600.103};
 						angles[]={0,0,0.00069813168};
 					};
-					id=863;
+					id=1211;
 					type="ModuleCurator_F";
-					atlOffset=-1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -31727,7 +31725,7 @@ class Mission
 				};
 			};
 			id=779;
-			atlOffset=92.988876;
+			atlOffset=114.07436;
 		};
 		class Item3
 		{
@@ -32061,11 +32059,13 @@ class Mission
 				class Item8
 				{
 					dataType="Marker";
-					position[]={12563.026,-77.865929,12634.299};
+					position[]={12563.34,-77.865997,12634.404};
 					name="marker_0";
+					text="D-651 Normandie";
 					type="flag_France";
 					alpha=0.50000018;
 					id=1205;
+					atlOffset=-0.00039672852;
 				};
 				class Item9
 				{
@@ -32078,7 +32078,7 @@ class Mission
 				};
 			};
 			id=1;
-			atlOffset=67.247032;
+			atlOffset=67.24778;
 		};
 		class Item4
 		{
