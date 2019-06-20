@@ -4,8 +4,6 @@
 //downloaddata
 enableSaving [ false, false ];
 
-call compile preprocessFile "downloadData.sqf";
-
 waitUntil { !isNil "T8L_var_INITDONE" };
 
 if ( !isServer ) exitWith {}; 
