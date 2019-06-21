@@ -1,38 +1,24 @@
-#include "CHVD\dialog.hpp"
-class CfgFunctions
-{
-	#include "CHVD\CfgFunctions.hpp"
-};
-
-author="[-GSRI-] Lisitius";
-OnLoadName = "Orion_Malden";
-OnLoadMission = "Rejoignez-nous sur Teamspeak : ts.gsri.eu et sur notre groupe steam GSRI & Friends";
-loadScreen = "images\iconeserveur.jpg";
-overviewPicture = "images\iconeserveur.jpg";
-cba_settings_hasSettingsFile = 1;
-
-respawn = "BASE";
-respawnDelay = 5;
-respawnOnStart = -1;
-ReviveMode = 0;                         //0: disabled, 1: enabled, 2: controlled by player attributes
-ReviveForceRespawnDelay = 5;            //time needed to perform force respawn (in secs)
-disabledAI = 1;
-corpseManagerMode = 1; //Type of removed bodies: 0 - none, 1 - all, 2 - only respawnable, 3 - only non-respawnable 
-corpseLimit = 30; //Max number of bodies which can be available at the same time. When exceeded, start deleting immediately. 
-corpseRemovalMinTime = 120; //Minimal time in seconds a body stays in the scene (can't be removed sooner). 
-corpseRemovalMaxTime = 240; //Maximal time in seconds after which a dead body is removed (can't stay longer) 
-
-//download data //
-#include "downloadData.hpp"
-
 //ATM airdrop
 #include "ATM_airdrop\dialog.hpp"
-class CfgSounds
-{
-   sounds[] = {Vent,Vent2,Para};
+class CfgSounds {
+	sounds[] = {Vent,Vent2,Para};
 
 	class Vent {name="Vent";sound[]={ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
 	class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
 	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
+};
 
+class CfgFunctions {
+	class GSRI {
+		class zeus {
+			class handleRequest {};
+			class zeusSlots {};
+			class zeusRequest {};
+			class zeusRelease {};
+			class zeusHelp {};
+		};
+		class legacy {
+			class getDocument {};
+		};
+	};
 };
