@@ -17,5 +17,8 @@ class CfgFunctions {
 			class zeusRelease {};
 			class zeusHelp {};
 		};
+		class legacy {
+			class getDocument {};
+		};
 	};
 };
