@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11456.938,10.262177,11425.495};
-		dir[]={0.94579679,-0.26772407,-0.18451621};
-		up[]={0.26286417,0.96346343,-0.051282015};
-		aside[]={-0.19150399,-4.1574822e-007,-0.98160559};
+		pos[]={11549.957,25.021542,11441.832};
+		dir[]={-0.95866424,-0.1525733,-0.2401941};
+		up[]={-0.14799964,0.9882915,-0.037081525};
+		aside[]={-0.24303953,9.2666596e-008,0.97002047};
 	};
 };
 binarizationWanted=0;
@@ -27052,6 +27052,7 @@ class Mission
 										angles[]={0,2.494442,6.2817187};
 									};
 									side="Empty";
+									flags=4;
 									randomStartPositions[]=
 									{
 										"objcaaero1",
@@ -27066,7 +27067,7 @@ class Mission
 									};
 									id=571;
 									type="O_supplyCrate_F";
-									atlOffset=3.8440018;
+									atlOffset=0.00047302246;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27398,7 +27399,6 @@ class Mission
 									};
 									id=579;
 									type="ModuleTaskSetState_F";
-									atlOffset=0.13591003;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27476,7 +27476,6 @@ class Mission
 									};
 									id=607;
 									type="ModuleTaskCreate_F";
-									atlOffset=0.31522751;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -27759,7 +27758,7 @@ class Mission
 												angles[]={0,2.7164304,0};
 											};
 											side="East";
-											flags=3;
+											flags=7;
 											randomStartPositions[]=
 											{
 												"objoffaero3",
@@ -27773,7 +27772,7 @@ class Mission
 											};
 											id=598;
 											type="O_officer_F";
-											atlOffset=0.32500076;
+											atlOffset=0.0003452301;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -27841,7 +27840,7 @@ class Mission
 									{
 									};
 									id=597;
-									atlOffset=0.32500076;
+									atlOffset=0.0003452301;
 								};
 								class Item4
 								{
@@ -27987,7 +27986,7 @@ class Mission
 							};
 							class Attributes
 							{
-								init="call{this addAction [""<t color='#ff0000'>Documents Secret</t>"", ""[this] call GSRI_fnc_getDocument"",""(_target distance _this) < 10""];}";
+								init="call{this addAction [""<t color='#ff0000'>Documents Secret</t>"", ""[doc1] call GSRI_fnc_getDocument"",""(_target distance _this) < 10""];}";
 								name="doc1";
 							};
 							id=610;
