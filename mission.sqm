@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1033;
+		nextID=1052;
 	};
 	class Camera
 	{
@@ -34,7 +34,6 @@ addons[]=
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Modules_F_Intel",
 	"A3_Characters_F",
-	"asr_ai3_skills",
 	"A3_Structures_F_Items_Luggage",
 	"cba_xeh",
 	"A3_Weapons_F",
