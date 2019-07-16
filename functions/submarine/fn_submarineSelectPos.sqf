@@ -10,7 +10,7 @@ if(_maxDepth > -25 and worldName != "VR") exitWith { openMap false; ["SubmarineF
 // TODO : check if there is players around the sub, both at actual and targeted coordinates
 
 // Select depth depending on Shift. key being pressed or not
-_pos set [2,([-20, -5] select _shift)];
+_pos set [2,([-25, -10] select _shift)];
 
 // Move submarine
 (destroyer getVariable "submarine") setPosASL _pos;
