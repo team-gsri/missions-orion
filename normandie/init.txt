@@ -1,9 +1,0 @@
-// La variable destroyer désigne le navire de classe Liberty placé dans l'éditeur.
-// Il est possible d'appeler chaque script indépendamment, à l'aide des commandes suivantes :
-[destroyer] execVM "armement.sqf";
-[destroyer] execVM "arsenal.sqf";
-[destroyer] execVM "baies.sqf";
-[destroyer] execVM "passerelle.sqf";
-
-// Il est également possible d'appeler tous les scripts en une seule ligne à l'aide de la commande suivante :
-[destroyer, true, true, true, true] execVM "initLiberty.sqf";

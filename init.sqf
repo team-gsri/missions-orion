@@ -1,4 +1,9 @@
-// Enregistrement des commandes de requête Zeus
+// Reminder : add D-651 Normandie tag french flag with Eden properties
+
+// Must be executed on all clients
+[destroyer] call GSRI_fnc_libertyInit;
+
+// Tracking Zeus commands
 ["zeus", {(_this select 0) spawn GSRI_fnc_handleRequest}, "all"] call CBA_fnc_registerChatCommand;
 
 //EOS SYSTEM
