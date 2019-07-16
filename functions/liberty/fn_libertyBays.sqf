@@ -9,6 +9,7 @@ if(isServer) then {
 	// Baie tribord
 	_tri = createVehicle ["Land_Destroyer_01_Boat_Rack_01_F", [0,0,0], [], 0, "NONE"];
 	_tri enableSimulation false;
+	_tri allowDamage false;
 	_tri setDir (getDir _navire + 180);
 	_tri setPosATL ASLToATL (_navire modelToWorldWorld [-11.5,14.43,7.5]);
 	_tri enableSimulation true;
@@ -18,6 +19,7 @@ if(isServer) then {
 	// Baie babord
 	_ba = createVehicle ["Land_Destroyer_01_Boat_Rack_01_F", [0,0,0], [], 0, "NONE"];
 	_ba enableSimulation false;
+	_ba allowDamage false;
 	_ba setDir (getDir _navire + 180);
 	_ba setPosATL ASLToATL (_navire modelToWorldWorld [11.5,14.43,7.5]);
 	_ba enableSimulation true;
