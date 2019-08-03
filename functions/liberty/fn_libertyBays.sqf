@@ -28,14 +28,14 @@ if(isServer) then {
 };
 
 // Création des commandes, côté client
-_com1 = "Land_Battery_F" createVehicleLocal [0,0,0];
-_com1 enableSimulation false;
-_com1 setPosATL ASLToATL (_navire modelToWorldWorld [-3.4,12,13.8]);
+_com1 = "Land_Tablet_02_black_F" createVehicleLocal [0,0,0];
+_com1 attachTo [_navire, [-4.4,18.29,8.9]];
+_com1 setVectorDirAndUp [[0,0,-1],[0,-1,0]];
 _com1 setVariable ["baie", _navire getVariable "baie_tribord", true];
 
-_com2 = "Land_Battery_F" createVehicleLocal [0,0,0];
-_com2 enableSimulation false;
-_com2 setPosATL ASLToATL (_navire modelToWorldWorld [3.4,12,13.8]);
+_com2 = "Land_Tablet_02_black_F" createVehicleLocal [0,0,0];
+_com2 attachTo [_navire, [4.4,18.29,8.9]];
+_com2 setVectorDirAndUp [[0,0,-1],[0,-1,0]];
 _com2 setVariable ["baie", _navire getVariable "baie_babord", true];
 
 // Actions ACE

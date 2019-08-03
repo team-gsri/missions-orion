@@ -65,7 +65,7 @@ class CfgNotifications
 	class SubmarineFail
 	{
 		title = "GSRI Insertion System";
-		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFail_ca.paa";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		iconText = "";
 		description = "Submarine cannot go here.";
 		color[] = {1,1,1,1};
