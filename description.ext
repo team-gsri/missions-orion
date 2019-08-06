@@ -12,6 +12,7 @@ class CfgFunctions {
 	class GSRI {
 		class liberty {
 			class libertyArsenal {};
+			class libertyPreslots {};
 			class libertyBays {};
 			class libertyBridge {};
 			class libertyWeapons {};

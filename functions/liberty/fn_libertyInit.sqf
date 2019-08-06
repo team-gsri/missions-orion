@@ -1,7 +1,8 @@
-params["_destroyer", ["_weapons", true], ["_arsenal", true], ["_bridge", true], ["_bays", true], ["_heli", true], ["_sub", true]];
+params["_destroyer", ["_weapons", true], ["_arsenal", true], ["_preslots", true], ["_bridge", true], ["_bays", true], ["_heli", true], ["_sub", true]];
 
 if(_weapons) then { [_destroyer] call GSRI_fnc_libertyWeapons };
 if(_arsenal) then { [_destroyer] call GSRI_fnc_libertyArsenal };
+if(_preslots) then { [_destroyer] call GSRI_fnc_libertyPreslots };
 if(_bridge) then { [_destroyer] call GSRI_fnc_libertyBridge };
 if(_bays) then { [_destroyer] call GSRI_fnc_libertyBays };
 if(_heli) then { [_destroyer] call GSRI_fnc_initHeli };
