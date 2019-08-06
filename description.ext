@@ -58,7 +58,7 @@ class CfgNotifications
 		title = "GSRI Insertion System";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		iconText = "";
-		description = "Submarine has been moved as designated (%1).";
+		description = $STR_GSRI_submarineOk;
 		color[] = {1,1,1,1};
 		duration = 5;
 		priority = 0;
@@ -69,7 +69,7 @@ class CfgNotifications
 		title = "GSRI Insertion System";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconFailed_ca.paa";
 		iconText = "";
-		description = "Submarine cannot go here.";
+		description = $STR_GSRI_submarineFail;
 		color[] = {1,1,1,1};
 		duration = 5;
 		priority = 0;
@@ -80,7 +80,7 @@ class CfgNotifications
 		title = "GSRI Insertion System";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\quay_ca.paa";
 		iconText = "";
-		description = "Left-click to move, shift+click to move in surface.";
+		description = $STR_GSRI_submarineInfo;
 		color[] = {1,1,1,1};
 		duration = 5;
 		priority = 0;
@@ -91,7 +91,7 @@ class CfgNotifications
 		title = "GSRI Insertion System";
 		iconPicture = "\A3\ui_f\data\map\vehicleicons\iconhelicopter_ca.paa";
 		iconText = "";
-		description = "%1 est disponible dans le hangar.";
+		description = $STR_GSRI_heliInfo;
 		color[] = {1,1,1,1};
 		duration = 5;
 		priority = 0;
@@ -99,14 +99,14 @@ class CfgNotifications
 	};
 	class HeliDelete : HeliInfo
 	{
-		description = "%1 a été supprimé.";
+		description = $STR_GSRI_heliDelete;
 	};
 	class HeliMoved : HeliInfo
 	{
-		description = "%1 a été déplacé.";
+		description = $STR_GSRI_heliMoved;
 	};
 	class HeliFRIES : HeliInfo
 	{
-		description = "%1 a été équipé d'un FRIES.";
+		description = $STR_GSRI_heliFRIES;
 	};
 };
