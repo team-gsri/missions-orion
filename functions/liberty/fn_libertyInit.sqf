@@ -13,24 +13,19 @@ if(isServer) then {
 	_mk setMarkerType "flag_France";
 	_mk setMarkerText "D-651 Normandie";
 
-	// Add restricted zone sign
-	_sign = "SignAd_Sponsor_F" createVehicle [0,0,0];
-	_sign enableSimulation false;
-	_sign attachTo [_destroyer, [-1.912,6.641,8.27]];
-	_sign setDir 270;
-	_sign setObjectTextureGlobal [0, "images\zone_preparation.paa"];
+	// Signs array
+	_signs = [
+		["SignAd_Sponsor_F",[-1.912,6.641,8.27],270,"images\zone_preparation.paa"],
+		["SignAd_Sponsor_F",[-2.91199,14.007,7.465],270,"images\vers_sousmarin.paa"],
+		["SignAd_SponsorS_F",[-10.116,50.833,9.2],270,"images\vers_heli.paa"]
+	];
 
-	// Add "to submarine" sign
-	_sign2 = "SignAd_Sponsor_F" createVehicle [0,0,0];
-	_sign2 enableSimulation false;
-	_sign2 attachTo [_destroyer, [-2.91199,14.007,7.465]];
-	_sign2 setDir 270;
-	_sign2 setObjectTextureGlobal [0, "images\vers_sousmarin.paa"];
-
-	// Add "to heli" sign
-	_sign2 = "SignAd_SponsorS_F" createVehicle [0,0,0];
-	_sign2 enableSimulation false;
-	_sign2 attachTo [_destroyer, [-10.116,50.833,9.2]];
-	_sign2 setDir 270;
-	_sign2 setObjectTextureGlobal [0, "images\vers_heli.paa"];
+	{
+		_x params ["_class", "_pos", "_dir", "_texture"];
+		_sign = _class createVehicle [0,0,0];
+		_sign enableSimulation false;
+		_sign attachTo [_destroyer, _pos];
+		_sign setDir _dir;
+		_sign setObjectTextureGlobal [0, _texture];
+	} forEach _signs;
 };

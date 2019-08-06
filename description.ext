@@ -23,6 +23,8 @@ class CfgFunctions {
 			class spawnHeli {};
 			class initHeli {};
 			class minifyName {};
+			class addCleaningAction {};
+			class addFRIESAction {};
 		};
 		class zeus {
 			class handleRequest {};
