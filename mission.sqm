@@ -8,22 +8,22 @@ class EditorData
 	toggles=514;
 	class ItemIDProvider
 	{
-		nextID=1265;
+		nextID=1276;
 	};
 	class MarkerIDProvider
 	{
-		nextID=104;
+		nextID=109;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1109;
+		nextID=1128;
 	};
 	class Camera
 	{
-		pos[]={11416.426,8.4782791,11454.956};
-		dir[]={-0.79014289,-0.15644208,0.59269905};
-		up[]={-0.12521735,0.98767048,0.093928032};
-		aside[]={0.60008526,-1.280132e-007,0.79998827};
+		pos[]={981.18256,70.277451,12156.176};
+		dir[]={0.1866377,-0.38216913,0.90507019};
+		up[]={0.077187642,0.92408693,0.37431195};
+		aside[]={0.97941375,-2.5225199e-007,-0.20196873};
 	};
 };
 binarizationWanted=0;
@@ -64,13 +64,14 @@ addons[]=
 	"A3_Structures_F_Items_Stationery",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
 	"A3_Props_F_Jets_Military_Tractor",
-	"A3_Structures_F_Heli_Items_Airport"
+	"A3_Structures_F_Heli_Items_Airport",
+	"VSM_ACU_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -251,6 +252,11 @@ class AddonsMetaData
 			name="Arma 3 Jets - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item27
+		{
+			className="VSM_ACU_Config";
+			name="VSM_ACU_Config";
 		};
 	};
 };
@@ -5362,7 +5368,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=16;
 		class Item0
 		{
 			dataType="Layer";
@@ -10992,6 +10998,7 @@ class Mission
 										angles[]={0,2.494442,6.2817187};
 									};
 									side="Empty";
+									flags=4;
 									randomStartPositions[]=
 									{
 										"objcaaero1",
@@ -11006,7 +11013,7 @@ class Mission
 									};
 									id=571;
 									type="O_supplyCrate_F";
-									atlOffset=3.8440018;
+									atlOffset=0.00047302246;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -11338,7 +11345,6 @@ class Mission
 									};
 									id=579;
 									type="ModuleTaskSetState_F";
-									atlOffset=0.13591003;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -11416,7 +11422,6 @@ class Mission
 									};
 									id=607;
 									type="ModuleTaskCreate_F";
-									atlOffset=0.31522751;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -11699,7 +11704,7 @@ class Mission
 												angles[]={0,2.7164304,0};
 											};
 											side="East";
-											flags=3;
+											flags=7;
 											randomStartPositions[]=
 											{
 												"objoffaero3",
@@ -11713,7 +11718,7 @@ class Mission
 											};
 											id=598;
 											type="O_officer_F";
-											atlOffset=0.32500076;
+											atlOffset=0.0003452301;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -11781,7 +11786,7 @@ class Mission
 									{
 									};
 									id=597;
-									atlOffset=0.32500076;
+									atlOffset=0.0003452301;
 								};
 								class Item4
 								{
@@ -18082,6 +18087,132 @@ class Mission
 			type="Empty";
 			id=1263;
 			atlOffset=0.00033521652;
+		};
+		class Item10
+		{
+			dataType="Marker";
+			position[]={1004.701,28.93,12148.664};
+			name="marker_fob_moray";
+			type="Empty";
+			id=1265;
+		};
+		class Item11
+		{
+			dataType="Marker";
+			position[]={6023.4409,170.123,9597.4111};
+			name="marker_fob_nord";
+			type="Empty";
+			id=1266;
+			atlOffset=0.0002746582;
+		};
+		class Item12
+		{
+			dataType="Marker";
+			position[]={5020.832,72.690002,3976.063};
+			name="marker_fob_sud";
+			type="Empty";
+			id=1267;
+		};
+		class Item13
+		{
+			dataType="Marker";
+			position[]={5033.0688,413.716,7405.729};
+			name="marker_fob_montagne";
+			type="Empty";
+			id=1268;
+			atlOffset=-0.00033569336;
+		};
+		class Item14
+		{
+			dataType="Marker";
+			position[]={11630.777,14.06,4458.5879};
+			name="marker_fob_ile";
+			type="Empty";
+			id=1269;
+		};
+		class Item15
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11391.939,18.410297,11468.615};
+						angles[]={0,4.5731115,0};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						rank="COLONEL";
+						name="DW_COMMANDER";
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="VSM_ACU_camo_OD";
+								isBackpack=0;
+							};
+							headgear="GSRI_beret";
+						};
+					};
+					id=1271;
+					type="B_officer_F";
+					atlOffset=8.8117456;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male10ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1270;
+			atlOffset=8.8117456;
 		};
 	};
 	class Connections
