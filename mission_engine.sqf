@@ -30,9 +30,10 @@ DW_MISSION_POPULATE = DW_MISSION_POPULATE_DEFAULT;
  * 3, sud = partie sud de l'île principale
  * 4, ile = île militarisée au sud-est
 */
-DW_LISTE_FOB = ["moray", "nord", "montagne", "sud", "ile"];
+//DW_LISTE_FOB = ["moray", "nord", "montagne", "sud", "ile"];
+DW_LISTE_FOB = ["nord"];
 DW_LISTE_FOB_MORAY = ["dummy"];
-DW_LISTE_FOB_NORD = ["dummy"];
+DW_LISTE_FOB_NORD = ["lolisse"];
 DW_LISTE_FOB_MONTAGNE = ["dummy"];
 DW_LISTE_FOB_SUD = ["dummy"];
 DW_LISTE_FOB_ILE = ["dummy"];

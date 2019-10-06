@@ -51,21 +51,27 @@ class CfgFunctions {
 		};
 	};
 	class DW {
-		class server {
+		class dw_server {
 			class loadMissionState {};
 			class saveMissionState {};
 			class switchReinitValue {};
 			class markerCreation {};
 		};
-		class dw {
+		class dw_engine {
 			class updateStatus {};
 			class openFob {};
 			class launchMainMission {};
 			class getRandomMissionNumber {};
 			class showGlobalMissionError {};
 		};
-		class client {
+		class dw_client {
 			class showLocalMissionError {};
+		};
+		class dw_populate {
+			class populateZone {};
+			class populateMilitaryTowers {};
+			class populateMilitaryQG {};
+			class populateMilitaryWatchTowers {};
 		};
 	};
 };

@@ -14,7 +14,7 @@ if(_type == "main") then {
 		{
 			switch (_zone) do 
 			{
-				case "dummy": { 1 };
+				case "lolisse": { 1 };
 			};
 		};
 		case "montagne":

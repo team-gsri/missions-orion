@@ -11,3 +11,6 @@ _veh = "O_Quadbike_01_F" createVehicle [935.721,12183.1,0];
 DW_MISSION_TEMP pushBack _veh;
 
 waitUntil {sleep 5; !alive _veh};
+
+deleteMarker "marker_dummy1";
+["task_dummy1", "SUCCEEDED"] call BIS_fnc_taskSetState;

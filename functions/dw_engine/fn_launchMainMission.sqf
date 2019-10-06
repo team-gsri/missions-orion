@@ -28,6 +28,7 @@ while {!_found && _found_counter < 1000} do
 		DW_MISSION_NUM_FOB = _num_fob;
 		_mission = format["fob\%1\main\%2\%3.sqf", _fob, _zone, _mission_name];
 		_found = true;
+		systemChat str _mission;
 	};
 };
 if(_found_counter == 1000) exitWith { ["Impossible de trouver une mission jouable"] call DW_fnc_showGlobalMissionError };
@@ -52,7 +53,7 @@ if(isNil "_handle") then
 	
 
 	// Population ennemie
-	//call LM_fnc_populateZone;
+	call DW_fnc_populateZone;
 	
 	if(count allGroups >= 250) then { ["Nombre de groupes existants a atteint 250"] call DW_fnc_showGlobalMissionError; };
 
