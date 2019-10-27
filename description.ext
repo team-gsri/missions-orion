@@ -61,10 +61,7 @@ class CfgFunctions {
 			class markerCreation {};
 		};
 		class dw_engine {
-			class updateStatus {};
-			class openFob {};
 			class launchMainMission {};
-			class getRandomMissionNumber {};
 			class showGlobalMissionError {};
 		};
 		class dw_client {
