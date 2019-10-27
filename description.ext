@@ -8,6 +8,9 @@ class CfgSounds {
 	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
 };
 
+//DW engine missions
+#include "DwMissions.hpp"
+
 class CfgFunctions {
 	class GSRI {
 		class liberty {
