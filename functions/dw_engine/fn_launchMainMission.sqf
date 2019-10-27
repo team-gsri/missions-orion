@@ -80,5 +80,7 @@ if(isNil "_handle") then
 	publicVariable "DW_MISSION_STARTED";
 
 	// Sauvegarde de l'état
+	DW_MISSION_DONE pushBack _candidate;
+	DW_MISSION_TASKS pushBack _task_identifier;
 	call DW_fnc_saveMissionState
 };

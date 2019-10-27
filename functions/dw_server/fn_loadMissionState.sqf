@@ -1,24 +1,30 @@
-// Restaure les données de missions sauvegardées
-
-_done = parseSimpleArray (profileNamespace getVariable ["DW_MISSION_DONE", "[]" ]);
-_markers = parseSimpleArray (profileNamespace getVariable["DW_MISSION_MARKERS", "[]" ]);
-_tasks = parseSimpleArray (profileNamespace getVariable["DW_MISSION_TASKS", "[]" ]);
+// Retrieve saved date
+_save = parseSimpleArray (profileNamespace getVariable ["DW_SAVE", "[]" ]);
 
 {
-	_marker = [format ["_marker_%1",_x],(_markers select _forEachIndex),"colorIndependent","ELLIPSE",500] call DW_fnc_markerCreation;
+	// Retrieve mission ID
+	DW_MISSION_DONE pushBack (_x select 0);
 
-	_taskArray = _tasks select _forEachIndex;
-	_t = [WEST, [_taskArray select 0]];
-	_desc = [
-		(_taskArray select 1 select 0 select 0),
-		(_taskArray select 1 select 1 select 0),
-		_marker
-	];
-	_t pushBack _desc;
-	_t pushBack _marker; // destination
-	_t pushBack (_taskArray select 3); // état
-	_t pushBack 0; // priorité
-	_t pushBack false; // pas de notif
-	_t pushBack (_taskArray select 2); // type
-	_task = _t call BIS_fnc_taskCreate; //création de la tâche
-} forEach _done;
+	// Retrieve mission metadata
+	_cfg = (missionConfigFile >> "DwMissions" >> "MainMissions" >> (_x select 0));
+	_rawLocation = (_cfg >> "location") call BIS_fnc_getCfgData;
+	_mission_location = [call compile _rawLocation, _rawLocation] select (typeName _rawLocation == "ARRAY");
+	_mission_name = (_cfg >> "name") call BIS_fnc_getCfgData;
+	_mission_description = (_cfg >> "description") call BIS_fnc_getCfgData;
+	_mission_type = (_cfg >> "type") call BIS_fnc_getCfgData;
+	_mission_marker = [format["marker_%1",_x],_mission_location,"colorIndependent","ELLIPSE",500] call DW_fnc_markerCreation;
+	_task_identifier = format["task_%1", _x];
+
+	// Restore mission task
+	[
+		WEST,
+		[_task_identifier],
+		[_mission_description,_mission_name,_mission_marker],
+		_mission_location,
+		(_x select 1),
+		0,
+		false,
+		_mission_type
+	] call BIS_fnc_taskCreate;
+	DW_MISSION_TASKS pushBack _task_identifier;
+} forEach _save;
