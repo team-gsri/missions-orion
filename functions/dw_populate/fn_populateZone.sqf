@@ -28,6 +28,6 @@ _trigger = createTrigger ["EmptyDetector", DW_MISSION_POSITION, false];
 _trigger setTriggerArea [1500, 1500, 0, false];
 _trigger setTriggerActivation ["EAST", "WEST D", false];
 _trigger setTriggerStatements ["this", "call DW_fnc_alertZone;", ""];
-*/
 
-DW_MISSION_TEMP pushBack _trigger;
+
+DW_MISSION_TEMP pushBack _trigger;*/
