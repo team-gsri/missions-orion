@@ -8,22 +8,22 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=1308;
+		nextID=1368;
 	};
 	class MarkerIDProvider
 	{
-		nextID=109;
+		nextID=110;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1147;
+		nextID=1201;
 	};
 	class Camera
 	{
-		pos[]={5618.5728,103.91299,11170.329};
-		dir[]={-0.75423741,-0.62478274,0.20209314};
-		up[]={-0.60351408,0.78078216,0.16170819};
-		aside[]={0.25882256,-2.2124732e-007,0.96595967};
+		pos[]={5854.8408,297.57162,8541.1299};
+		dir[]={0.59307855,-0.76102465,0.26290268};
+		up[]={0.69573283,0.64872187,0.30840707};
+		aside[]={0.40525618,7.9278834e-008,-0.91421121};
 	};
 };
 binarizationWanted=0;
@@ -44,7 +44,6 @@ addons[]=
 	"ace_dragging",
 	"A3_Soft_F_Gamma_Truck_02",
 	"ace_realisticnames",
-	"A3_Structures_F_Ind_Transmitter_Tower",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Boat_F_Destroyer_Destroyer_01",
 	"A3_Structures_F_Civ_InfoBoards",
@@ -70,7 +69,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=26;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -150,102 +149,95 @@ class AddonsMetaData
 		};
 		class Item11
 		{
-			className="A3_Structures_F_Ind";
-			name="Arma 3 - Industrial Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item12
-		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item12
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item13
 		{
 			className="gsri_headgear";
 			name="gsri_headgear";
 			author="[-GSRI-]Seenri";
 		};
-		class Item15
+		class Item14
 		{
 			className="VSM_G2_Config";
 			name="VSM_G2_Config";
 		};
-		class Item16
+		class Item15
 		{
 			className="milgp_headgear_cfg";
 			name="milgp_headgear_cfg";
 		};
-		class Item17
+		class Item16
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item17
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item18
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item19
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item20
 		{
 			className="BaBe_EM";
 			name="BaBe_EM";
 		};
-		class Item22
+		class Item21
 		{
 			className="r_unfold";
 			name="r_unfold";
 			author="Rallen";
 		};
-		class Item23
+		class Item22
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item23
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item24
 		{
 			className="A3_Props_F_Jets";
 			name="Arma 3 Jets - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item25
 		{
 			className="VSM_ACU_Config";
 			name="VSM_ACU_Config";
@@ -10966,7 +10958,7 @@ class Mission
 			name="Objectif secondaire";
 			class Entities
 			{
-				items=6;
+				items=5;
 				class Item0
 				{
 					dataType="Layer";
@@ -14840,389 +14832,6 @@ class Mission
 					id=725;
 					atlOffset=-30.907951;
 				};
-				class Item5
-				{
-					dataType="Layer";
-					name="Larche";
-					class Entities
-					{
-						items=10;
-						class Item0
-						{
-							dataType="Marker";
-							position[]={6058.6924,-15.670532,8486.4697};
-							name="marker_99";
-							markerType="ELLIPSE";
-							type="ellipse";
-							colorName="ColorRed";
-							alpha=0.5;
-							fillName="SolidBorder";
-							a=150;
-							b=150;
-							drawBorder=1;
-							id=777;
-							atlOffset=-143.30743;
-						};
-						class Item1
-						{
-							dataType="Marker";
-							position[]={5936.0537,128.22104,8520.4746};
-							name="marker_94";
-							type="Empty";
-							id=769;
-						};
-						class Item2
-						{
-							dataType="Marker";
-							position[]={5974.5249,130.76991,8459.4834};
-							name="marker_95";
-							type="Empty";
-							id=770;
-						};
-						class Item3
-						{
-							dataType="Marker";
-							position[]={6043.1074,137.61861,8378.5635};
-							name="marker_96";
-							type="Empty";
-							id=771;
-						};
-						class Item4
-						{
-							dataType="Marker";
-							position[]={6143.6143,134.71858,8418.2373};
-							name="marker_97";
-							type="Empty";
-							id=772;
-						};
-						class Item5
-						{
-							dataType="Marker";
-							position[]={6176.9399,128.45052,8516.8926};
-							name="marker_98";
-							type="Empty";
-							id=773;
-						};
-						class Item6
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={6058.9409,127.23062,8491.5635};
-								angles[]={0.079829417,0,6.2816033};
-							};
-							id=775;
-							type="ModuleTaskCreate_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ModuleTaskCreate_F_Destination";
-									expression="_this setVariable ['Destination',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ModuleTaskCreate_F_Type";
-									expression="_this setVariable ['Type',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="destroy";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="ModuleTaskCreate_F_ShowNotification";
-									expression="_this setVariable ['ShowNotification',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="ModuleTaskCreate_F_Marker";
-									expression="_this setVariable ['Marker',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
-										};
-									};
-								};
-								class Attribute4
-								{
-									property="ModuleTaskCreate_F_Title";
-									expression="_this setVariable ['Title',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Détuisez la tour de communication";
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="ModuleTaskCreate_F_Description";
-									expression="_this setVariable ['Description',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Détuisez la tour de communication !";
-										};
-									};
-								};
-								class Attribute6
-								{
-									property="ModuleTaskCreate_F_ID";
-									expression="_this setVariable ['ID',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="destour1";
-										};
-									};
-								};
-								class Attribute7
-								{
-									property="ModuleTaskCreate_F_AlwaysVisible";
-									expression="_this setVariable ['AlwaysVisible',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=0;
-										};
-									};
-								};
-								class Attribute8
-								{
-									property="ModuleTaskCreate_F_Owner";
-									expression="_this setVariable ['Owner',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=3;
-										};
-									};
-								};
-								class Attribute9
-								{
-									property="ModuleTaskCreate_F_State";
-									expression="_this setVariable ['State',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="CREATED";
-										};
-									};
-								};
-								class Attribute10
-								{
-									property="ModuleTaskCreate_F_IDParent";
-									expression="_this setVariable ['IDParent',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="";
-										};
-									};
-								};
-								nAttributes=11;
-							};
-						};
-						class Item7
-						{
-							dataType="Logic";
-							class PositionInfo
-							{
-								position[]={6238.0151,136.11176,8445.2637};
-								angles[]={0.060726274,0,0.065505132};
-							};
-							id=776;
-							type="ModuleTaskSetState_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ModuleTaskSetState_F_ShowNotification";
-									expression="_this setVariable ['ShowNotification',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="ModuleTaskSetState_F_State";
-									expression="_this setVariable ['State',_value,true];";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="SUCCEEDED";
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
-						class Item8
-						{
-							dataType="Trigger";
-							position[]={6231.2788,142.31248,8387.4424};
-							class Attributes
-							{
-								condition="call{!alive tour1}";
-								sizeA=0;
-								sizeB=0;
-							};
-							id=774;
-							type="EmptyDetector";
-						};
-						class Item9
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={6057.9341,144.45941,8483.1807};
-								angles[]={0,1.5807621,0};
-							};
-							side="Empty";
-							flags=5;
-							randomStartPositions[]=
-							{
-								"marker_94",
-								"marker_95",
-								"marker_96",
-								"marker_97",
-								"marker_98"
-							};
-							class Attributes
-							{
-								name="tour1";
-							};
-							id=766;
-							type="Land_Communication_F";
-							atlOffset=2.2888184e-005;
-						};
-					};
-					id=778;
-					atlOffset=1.2530212;
-				};
 			};
 			id=587;
 			atlOffset=-141.47635;
@@ -17830,11 +17439,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=68;
+			nextID=60;
 		};
 		class Links
 		{
-			items=68;
+			items=60;
 			class Item0
 			{
 				linkID=0;
@@ -18368,58 +17977,58 @@ class Mission
 			class Item53
 			{
 				linkID=53;
-				item0=766;
-				item1=769;
+				item0=690;
+				item1=689;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item54
 			{
 				linkID=54;
-				item0=766;
-				item1=770;
+				item0=706;
+				item1=704;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item55
 			{
 				linkID=55;
-				item0=766;
-				item1=771;
+				item0=705;
+				item1=704;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item56
 			{
 				linkID=56;
-				item0=766;
-				item1=772;
+				item0=705;
+				item1=707;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item57
 			{
 				linkID=57;
-				item0=766;
-				item1=773;
+				item0=690;
+				item1=870;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item58
 			{
 				linkID=58;
-				item0=775;
-				item1=766;
+				item0=706;
+				item1=871;
 				class CustomData
 				{
 					type="Sync";
@@ -18428,86 +18037,6 @@ class Mission
 			class Item59
 			{
 				linkID=59;
-				item0=776;
-				item1=775;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item60
-			{
-				linkID=60;
-				item0=774;
-				item1=776;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item61
-			{
-				linkID=61;
-				item0=690;
-				item1=689;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item62
-			{
-				linkID=62;
-				item0=706;
-				item1=704;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item63
-			{
-				linkID=63;
-				item0=705;
-				item1=704;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item64
-			{
-				linkID=64;
-				item0=705;
-				item1=707;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item65
-			{
-				linkID=65;
-				item0=690;
-				item1=870;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item66
-			{
-				linkID=66;
-				item0=706;
-				item1=871;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item67
-			{
-				linkID=67;
 				item0=639;
 				item1=641;
 				class CustomData
