@@ -74,6 +74,7 @@ class CfgFunctions {
 			class populateMilitaryWatchTowers {};
 			class populateSheds {};
 			class populateSolarTowers {};
+			class populatePatrols {};
 		};
 	};
 };
