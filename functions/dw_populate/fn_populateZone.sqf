@@ -10,9 +10,9 @@ _miliTow = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 0] call DW_fnc_popu
 _miliQG = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 0] call DW_fnc_populateMilitaryQG);
 _miliWatch = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 0] call DW_fnc_populateMilitaryWatchTowers);
 _sheds = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 1] call DW_fnc_populateSheds);
-/*// helis = [DW_MISSION_POSITION, DW_MISSION_POPULATE select 2] call DW_fnc_populateHelipads;
+// helis = [DW_MISSION_POSITION, DW_MISSION_POPULATE select 2] call DW_fnc_populateHelipads;
 _solar = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 3] call DW_fnc_populateSolarTowers);
-_patrols = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 4] call DW_fnc_populatePatrols);*/
+_patrols = ([DW_MISSION_POSITION, DW_MISSION_POPULATE select 4] call DW_fnc_populatePatrols);
 
 sleep 7;
 _total = _miliQG + _miliTow + _miliWatch + _sheds + _solar + _patrols;
