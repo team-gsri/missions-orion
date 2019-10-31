@@ -6,7 +6,7 @@ Orion is a persistent mission designed and maintained by the **french ArmA 3 tea
 
 If you are willing to play with us, please visit [our official website](https://www.gsri.team) to obtain everything you need to get started.
 
-If you are willing to contribute to this repo for the first time, make a feature request or ask any question about it, please visit [our Discord server](https://discord.gg/bhMn4jd) and seek for **\[GSRI] Cheitan** (lead developper) or **\[GSRI] Arwyn** (IT manager and squad leader).
+If you are willing to contribute to this repo, please read carefully the **Contributing** page listed bellow.
 
 ## Rules and standards
 
