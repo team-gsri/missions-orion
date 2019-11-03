@@ -27,5 +27,14 @@ class DwMissions {
 			path="missions\arudy\arudy_legacy.sqf";
 			requires=[];
 		};
+		class LaRiviereVLS {
+			name="Frappe Venator";
+			description="La haute hiérarchie exige une démonstration des capacités opérationnelles et de l'efficacité du missile de croisière Venator. Nous avons choisi une cible stratégique d'actualité : le port de La Rivière. Il a été réquisitionné par le CSAT il y a deux semaines et est depuis lors aménagé en site de test d'un nouveau modèle de missile anti-navire. Démontrez les capacités du Venator en détruisant ce missile depuis la FREMM Normandie.";
+			type="destroy";
+			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_L_LaRiviereH' >> 'position')";
+			playable=1;
+			path="missions\riviere_vls\riviere_vls.sqf";
+			requires=[];
+		};
 	};
 };
