@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11449.6,8.4509373,11429.663};
-		dir[]={0.80072659,-0.058353703,-0.59627771};
-		up[]={0.04684924,0.99828535,-0.034886189};
-		aside[]={-0.59729242,1.0829644e-006,-0.80208921};
+		pos[]={11481.949,12.383973,11402.022};
+		dir[]={-0.80935955,-0.28094456,0.51596874};
+		up[]={-0.23693953,0.9597131,0.15104946};
+		aside[]={0.5376265,2.4039546e-006,0.84332561};
 	};
 };
 binarizationWanted=0;
@@ -5351,7 +5351,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=16;
+		items=11;
 		class Item0
 		{
 			dataType="Layer";
@@ -16922,48 +16922,6 @@ class Mission
 			atlOffset=0.00033521652;
 		};
 		class Item10
-		{
-			dataType="Marker";
-			position[]={1004.701,28.93,12148.664};
-			name="marker_fob_moray";
-			type="Empty";
-			id=1265;
-		};
-		class Item11
-		{
-			dataType="Marker";
-			position[]={6023.4409,170.123,9597.4111};
-			name="marker_fob_nord";
-			type="Empty";
-			id=1266;
-			atlOffset=0.0002746582;
-		};
-		class Item12
-		{
-			dataType="Marker";
-			position[]={5020.832,72.690002,3976.063};
-			name="marker_fob_sud";
-			type="Empty";
-			id=1267;
-		};
-		class Item13
-		{
-			dataType="Marker";
-			position[]={5033.0688,413.716,7405.729};
-			name="marker_fob_montagne";
-			type="Empty";
-			id=1268;
-			atlOffset=-0.00033569336;
-		};
-		class Item14
-		{
-			dataType="Marker";
-			position[]={11630.777,14.06,4458.5879};
-			name="marker_fob_ile";
-			type="Empty";
-			id=1269;
-		};
-		class Item15
 		{
 			dataType="Group";
 			side="West";
