@@ -58,7 +58,7 @@ DW_MISSION_TEMP pushBack _obj;
 _obj setDir ((_pos select 1) + 166);
 _obj setPosATL (_car modelToWorld [-1.72656,-1.73389,-0.774414]);
 _actionRecover = ["recoverData", "Recover data", "", _recover,{[DW_MISSION_MAIN_TASK] call BIS_fnc_taskState != "SUCCEEDED"}] call ace_interact_menu_fnc_createAction;
-[_obj, 0, [], _actionRecover] call ace_interact_menu_fnc_addActionToObject;
+[_obj, 0, [], _actionRecover] remoteExecCall ["ace_interact_menu_fnc_addActionToObject", 0, true];
 
 waitUntil {sleep 5; _obj getVariable ["DW_arudy_success", false] };
 [DW_MISSION_MAIN_TASK, "SUCCEEDED"] call BIS_fnc_taskSetState;
