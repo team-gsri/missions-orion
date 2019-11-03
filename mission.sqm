@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=1381;
+		nextID=1430;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1251;
+		nextID=1266;
 	};
 	class Camera
 	{
-		pos[]={11481.949,12.383973,11402.022};
-		dir[]={-0.80935955,-0.28094456,0.51596874};
-		up[]={-0.23693953,0.9597131,0.15104946};
-		aside[]={0.5376265,2.4039546e-006,0.84332561};
+		pos[]={11395.247,20.554901,11466.213};
+		dir[]={-0.87525773,-0.27542835,0.39768007};
+		up[]={-0.25076067,0.96131909,0.11393508};
+		aside[]={0.41367698,-5.3086842e-007,0.91047114};
 	};
 };
 binarizationWanted=0;
@@ -35,12 +35,12 @@ addons[]=
 	"A3_Modules_F_Intel",
 	"A3_Characters_F",
 	"cba_xeh",
-	"A3_Weapons_F",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_explosives",
 	"ace_chemlights",
 	"ace_rearm",
 	"ace_dragging",
+	"A3_Weapons_F",
 	"A3_Soft_F_Gamma_Truck_02",
 	"ace_realisticnames",
 	"A3_Modules_F_Curator_Curator",
@@ -10957,7 +10957,7 @@ class Mission
 			name="Objectif secondaire";
 			class Entities
 			{
-				items=4;
+				items=3;
 				class Item0
 				{
 					dataType="Layer";
@@ -11838,7 +11838,7 @@ class Mission
 					name="La Riviere";
 					class Entities
 					{
-						items=2;
+						items=1;
 						class Item0
 						{
 							dataType="Layer";
@@ -12319,907 +12319,11 @@ class Mission
 							id=644;
 							atlOffset=-9.2781525;
 						};
-						class Item1
-						{
-							dataType="Layer";
-							name="Cache";
-							class Entities
-							{
-								items=9;
-								class Item0
-								{
-									dataType="Marker";
-									position[]={3795.551,0,3214.585};
-									name="cachelariviere";
-									text="Detruire cache d'arme";
-									markerType="ELLIPSE";
-									type="ellipse";
-									colorName="ColorRed";
-									alpha=0.50000018;
-									fillName="SolidBorder";
-									a=40;
-									b=40;
-									drawBorder=1;
-									id=654;
-									atlOffset=-19.70887;
-								};
-								class Item1
-								{
-									dataType="Marker";
-									position[]={3808.4561,0,3183.22};
-									name="cachelariv";
-									type="Empty";
-									id=647;
-									atlOffset=-20.967384;
-								};
-								class Item2
-								{
-									dataType="Marker";
-									position[]={3815.5161,0,3197.5349};
-									name="cachelariv1";
-									type="Empty";
-									id=648;
-									atlOffset=-20.862879;
-								};
-								class Item3
-								{
-									dataType="Marker";
-									position[]={3822.9951,0,3200.1851};
-									name="cachelariv2";
-									type="Empty";
-									id=649;
-									atlOffset=-21.307787;
-								};
-								class Item4
-								{
-									dataType="Marker";
-									position[]={3792.5669,0,3229.009};
-									name="cachelariv3";
-									type="Empty";
-									id=650;
-									atlOffset=-19.433649;
-								};
-								class Item5
-								{
-									dataType="Logic";
-									class PositionInfo
-									{
-										position[]={3796.876,19.791241,3211.7209};
-										angles[]={0.011205014,0,0.021589722};
-									};
-									id=652;
-									type="ModuleTaskCreate_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="ModuleTaskCreate_F_Destination";
-											expression="_this setVariable ['Destination',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="ModuleTaskCreate_F_Type";
-											expression="_this setVariable ['Type',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="destroy";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="ModuleTaskCreate_F_ShowNotification";
-											expression="_this setVariable ['ShowNotification',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="ModuleTaskCreate_F_Marker";
-											expression="_this setVariable ['Marker',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="";
-												};
-											};
-										};
-										class Attribute4
-										{
-											property="ModuleTaskCreate_F_Title";
-											expression="_this setVariable ['Title',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Détruire cache d'arme";
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="ModuleTaskCreate_F_Description";
-											expression="_this setVariable ['Description',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Détruire cache d'arme la cache d'arme à LaRiviere";
-												};
-											};
-										};
-										class Attribute6
-										{
-											property="ModuleTaskCreate_F_ID";
-											expression="_this setVariable ['ID',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="cachelariv";
-												};
-											};
-										};
-										class Attribute7
-										{
-											property="ModuleTaskCreate_F_AlwaysVisible";
-											expression="_this setVariable ['AlwaysVisible',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute8
-										{
-											property="ModuleTaskCreate_F_Owner";
-											expression="_this setVariable ['Owner',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=3;
-												};
-											};
-										};
-										class Attribute9
-										{
-											property="ModuleTaskCreate_F_State";
-											expression="_this setVariable ['State',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="CREATED";
-												};
-											};
-										};
-										class Attribute10
-										{
-											property="ModuleTaskCreate_F_IDParent";
-											expression="_this setVariable ['IDParent',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="";
-												};
-											};
-										};
-										nAttributes=11;
-									};
-								};
-								class Item6
-								{
-									dataType="Logic";
-									class PositionInfo
-									{
-										position[]={3801.675,21.080776,3170.3315};
-										angles[]={0.019999012,0,0.087774232};
-									};
-									id=653;
-									type="ModuleTaskSetState_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="ModuleTaskSetState_F_ShowNotification";
-											expression="_this setVariable ['ShowNotification',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="ModuleTaskSetState_F_State";
-											expression="_this setVariable ['State',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="SUCCEEDED";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item7
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3789.2366,20.806833,3189.908};
-										angles[]={0,0,6.2826962};
-									};
-									side="Empty";
-									flags=4;
-									randomStartPositions[]=
-									{
-										"cachelariv3",
-										"cachelariv1",
-										"cachelariv2",
-										"cachelariv"
-									};
-									class Attributes
-									{
-										name="cache2";
-									};
-									id=646;
-									type="O_supplyCrate_F";
-									atlOffset=0.00027275085;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="ammoBox";
-											expression="[_this,_value] call bis_fnc_initAmmoBox;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="[[[[""launch_RPG32_F"",""arifle_Katiba_F"",""LMG_Zafir_F"",""FirstAidKit""],[1,2,1,10]],[[""16Rnd_9x21_Mag"",""30Rnd_65x39_caseless_green"",""10Rnd_762x54_Mag"",""150Rnd_762x54_Box"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""Chemlight_red"",""RPG32_F"",""RPG32_HE_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellRed"",""UGL_FlareYellow_F"",""UGL_FlareRed_F"",""30Rnd_9x21_Mag_SMG_02"",""ACE_SpareBarrel""],[6,24,12,4,6,2,2,6,3,1,2,6,6,2,2,2,2,6,2]],[[""Laserdesignator_02"",""acc_flashlight"",""bipod_02_F_blk"",""ACE_Chemlight_Shield"",""ACE_EarPlugs""],[1,2,1,12,12]],[[""B_FieldPack_ocamo""],[2]]],false]";
-												};
-											};
-										};
-										nAttributes=1;
-									};
-								};
-								class Item8
-								{
-									dataType="Trigger";
-									position[]={3795.5239,20.779032,3160.342};
-									class Attributes
-									{
-										condition="call{!alive cache2}";
-										sizeA=0;
-										sizeB=0;
-									};
-									id=651;
-									type="EmptyDetector";
-								};
-							};
-							id=655;
-							atlOffset=-1.3385811;
-						};
 					};
 					id=628;
-					atlOffset=-4.7874498;
+					atlOffset=-9.2781525;
 				};
 				class Item2
-				{
-					dataType="Layer";
-					name="Cancon";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="Otage";
-							class Entities
-							{
-								items=9;
-								class Item0
-								{
-									dataType="Marker";
-									position[]={5387.9502,0,2769.28};
-									name="otagecan";
-									text="Touver l'otage à cancon";
-									markerType="ELLIPSE";
-									type="ellipse";
-									colorName="ColorRed";
-									alpha=0.5;
-									fillName="SolidBorder";
-									a=50;
-									b=50;
-									drawBorder=1;
-									id=691;
-									atlOffset=-43.260365;
-								};
-								class Item1
-								{
-									dataType="Marker";
-									position[]={5389.3286,43.917717,2766.7446};
-									name="marker_77";
-									type="Empty";
-									id=684;
-								};
-								class Item2
-								{
-									dataType="Marker";
-									position[]={5370.6875,44.036396,2775.7581};
-									name="marker_78";
-									type="Empty";
-									id=685;
-								};
-								class Item3
-								{
-									dataType="Marker";
-									position[]={5347.9619,40.668686,2747.1589};
-									name="marker_79";
-									type="Empty";
-									id=686;
-									atlOffset=0.0011367798;
-								};
-								class Item4
-								{
-									dataType="Marker";
-									position[]={5382.1924,42.860195,2754.1079};
-									name="marker_80";
-									type="Empty";
-									id=687;
-								};
-								class Item5
-								{
-									dataType="Marker";
-									position[]={5386.5771,43.781975,2786.9768};
-									name="marker_81";
-									type="Empty";
-									id=688;
-								};
-								class Item6
-								{
-									dataType="Logic";
-									class PositionInfo
-									{
-										position[]={5419.6548,43.951481,2777.821};
-										angles[]={6.2815971,0,6.268786};
-									};
-									id=689;
-									type="ModuleTaskCreate_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="ModuleTaskCreate_F_Destination";
-											expression="_this setVariable ['Destination',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="ModuleTaskCreate_F_Type";
-											expression="_this setVariable ['Type',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="help";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="ModuleTaskCreate_F_ShowNotification";
-											expression="_this setVariable ['ShowNotification',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="ModuleTaskCreate_F_Marker";
-											expression="_this setVariable ['Marker',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="";
-												};
-											};
-										};
-										class Attribute4
-										{
-											property="ModuleTaskCreate_F_Title";
-											expression="_this setVariable ['Title',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Trouver l'otage";
-												};
-											};
-										};
-										class Attribute5
-										{
-											property="ModuleTaskCreate_F_Description";
-											expression="_this setVariable ['Description',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Trouver l'otage et évacuer le jusqu'à la base.";
-												};
-											};
-										};
-										class Attribute6
-										{
-											property="ModuleTaskCreate_F_ID";
-											expression="_this setVariable ['ID',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="canota1";
-												};
-											};
-										};
-										class Attribute7
-										{
-											property="ModuleTaskCreate_F_AlwaysVisible";
-											expression="_this setVariable ['AlwaysVisible',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute8
-										{
-											property="ModuleTaskCreate_F_Owner";
-											expression="_this setVariable ['Owner',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=3;
-												};
-											};
-										};
-										class Attribute9
-										{
-											property="ModuleTaskCreate_F_State";
-											expression="_this setVariable ['State',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="CREATED";
-												};
-											};
-										};
-										class Attribute10
-										{
-											property="ModuleTaskCreate_F_IDParent";
-											expression="_this setVariable ['IDParent',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="";
-												};
-											};
-										};
-										nAttributes=11;
-									};
-								};
-								class Item7
-								{
-									dataType="Logic";
-									class PositionInfo
-									{
-										position[]={5409.1929,43.930679,2773.0769};
-										angles[]={6.252799,0,0.01839577};
-									};
-									id=690;
-									type="ModuleTaskSetState_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="ModuleTaskSetState_F_ShowNotification";
-											expression="_this setVariable ['ShowNotification',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="ModuleTaskSetState_F_State";
-											expression="_this setVariable ['State',_value,true];";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="SUCCEEDED";
-												};
-											};
-										};
-										nAttributes=2;
-									};
-								};
-								class Item8
-								{
-									dataType="Group";
-									side="Civilian";
-									class Entities
-									{
-										items=1;
-										class Item0
-										{
-											dataType="Object";
-											class PositionInfo
-											{
-												position[]={5413.2578,48.280621,2787.4651};
-												angles[]={0,4.5589399,0};
-											};
-											side="Civilian";
-											flags=7;
-											randomStartPositions[]=
-											{
-												"marker_81",
-												"marker_78",
-												"marker_77",
-												"marker_80",
-												"marker_79"
-											};
-											class Attributes
-											{
-												name="civil2";
-												class Inventory
-												{
-													class uniform
-													{
-														typeName="U_C_Journalist";
-														isBackpack=0;
-													};
-													class vest
-													{
-														typeName="V_Press_F";
-														isBackpack=0;
-													};
-													map="ItemMap";
-													compass="ItemCompass";
-													watch="ItemWatch";
-													headgear="H_Cap_press";
-												};
-											};
-											id=683;
-											type="C_journalist_F";
-											atlOffset=0.00019454956;
-											class CustomAttributes
-											{
-												class Attribute0
-												{
-													property="acex_headless_blacklist";
-													expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"BOOL"
-																};
-															};
-															value=0;
-														};
-													};
-												};
-												class Attribute1
-												{
-													property="ace_isHandcuffed";
-													expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"BOOL"
-																};
-															};
-															value=1;
-														};
-													};
-												};
-												class Attribute2
-												{
-													property="speaker";
-													expression="_this setspeaker _value;";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"STRING"
-																};
-															};
-															value="Male01GRE";
-														};
-													};
-												};
-												class Attribute3
-												{
-													property="pitch";
-													expression="_this setpitch _value;";
-													class Value
-													{
-														class data
-														{
-															class type
-															{
-																type[]=
-																{
-																	"SCALAR"
-																};
-															};
-															value=1;
-														};
-													};
-												};
-												nAttributes=4;
-											};
-										};
-									};
-									class Attributes
-									{
-									};
-									id=682;
-									atlOffset=0.00019454956;
-								};
-							};
-							id=692;
-							atlOffset=1.8567276;
-						};
-					};
-					id=681;
-					atlOffset=1.8567276;
-				};
-				class Item3
 				{
 					dataType="Layer";
 					name="Le Port";
@@ -14447,7 +13551,7 @@ class Mission
 				};
 			};
 			id=587;
-			atlOffset=-42.39706;
+			atlOffset=-111.51531;
 		};
 		class Item2
 		{
@@ -17010,11 +16114,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=52;
+			nextID=37;
 		};
 		class Links
 		{
-			items=52;
+			items=37;
 			class Item0
 			{
 				linkID=0;
@@ -17248,18 +16352,18 @@ class Mission
 			class Item23
 			{
 				linkID=23;
-				item0=646;
-				item1=650;
+				item0=704;
+				item1=703;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item24
 			{
 				linkID=24;
-				item0=646;
-				item1=648;
+				item0=703;
+				item1=708;
 				class CustomData
 				{
 					type="RandomStart";
@@ -17268,8 +16372,8 @@ class Mission
 			class Item25
 			{
 				linkID=25;
-				item0=646;
-				item1=649;
+				item0=703;
+				item1=716;
 				class CustomData
 				{
 					type="RandomStart";
@@ -17278,8 +16382,8 @@ class Mission
 			class Item26
 			{
 				linkID=26;
-				item0=646;
-				item1=647;
+				item0=727;
+				item1=730;
 				class CustomData
 				{
 					type="RandomStart";
@@ -17288,28 +16392,28 @@ class Mission
 			class Item27
 			{
 				linkID=27;
-				item0=652;
-				item1=646;
+				item0=727;
+				item1=728;
 				class CustomData
 				{
-					type="Sync";
+					type="RandomStart";
 				};
 			};
 			class Item28
 			{
 				linkID=28;
-				item0=653;
-				item1=652;
+				item0=727;
+				item1=729;
 				class CustomData
 				{
-					type="Sync";
+					type="RandomStart";
 				};
 			};
 			class Item29
 			{
 				linkID=29;
-				item0=651;
-				item1=653;
+				item0=733;
+				item1=732;
 				class CustomData
 				{
 					type="Sync";
@@ -17318,58 +16422,58 @@ class Mission
 			class Item30
 			{
 				linkID=30;
-				item0=683;
-				item1=688;
+				item0=732;
+				item1=727;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item31
 			{
 				linkID=31;
-				item0=683;
-				item1=685;
+				item0=731;
+				item1=733;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item32
 			{
 				linkID=32;
-				item0=683;
-				item1=684;
+				item0=706;
+				item1=704;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item33
 			{
 				linkID=33;
-				item0=683;
-				item1=687;
+				item0=705;
+				item1=704;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item34
 			{
 				linkID=34;
-				item0=683;
-				item1=686;
+				item0=705;
+				item1=707;
 				class CustomData
 				{
-					type="RandomStart";
+					type="Sync";
 				};
 			};
 			class Item35
 			{
 				linkID=35;
-				item0=689;
-				item1=683;
+				item0=706;
+				item1=871;
 				class CustomData
 				{
 					type="Sync";
@@ -17378,156 +16482,6 @@ class Mission
 			class Item36
 			{
 				linkID=36;
-				item0=704;
-				item1=703;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item37
-			{
-				linkID=37;
-				item0=703;
-				item1=708;
-				class CustomData
-				{
-					type="RandomStart";
-				};
-			};
-			class Item38
-			{
-				linkID=38;
-				item0=703;
-				item1=716;
-				class CustomData
-				{
-					type="RandomStart";
-				};
-			};
-			class Item39
-			{
-				linkID=39;
-				item0=727;
-				item1=730;
-				class CustomData
-				{
-					type="RandomStart";
-				};
-			};
-			class Item40
-			{
-				linkID=40;
-				item0=727;
-				item1=728;
-				class CustomData
-				{
-					type="RandomStart";
-				};
-			};
-			class Item41
-			{
-				linkID=41;
-				item0=727;
-				item1=729;
-				class CustomData
-				{
-					type="RandomStart";
-				};
-			};
-			class Item42
-			{
-				linkID=42;
-				item0=733;
-				item1=732;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item43
-			{
-				linkID=43;
-				item0=732;
-				item1=727;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item44
-			{
-				linkID=44;
-				item0=731;
-				item1=733;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item45
-			{
-				linkID=45;
-				item0=690;
-				item1=689;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item46
-			{
-				linkID=46;
-				item0=706;
-				item1=704;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item47
-			{
-				linkID=47;
-				item0=705;
-				item1=704;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item48
-			{
-				linkID=48;
-				item0=705;
-				item1=707;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item49
-			{
-				linkID=49;
-				item0=690;
-				item1=870;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item50
-			{
-				linkID=50;
-				item0=706;
-				item1=871;
-				class CustomData
-				{
-					type="Sync";
-				};
-			};
-			class Item51
-			{
-				linkID=51;
 				item0=639;
 				item1=641;
 				class CustomData

@@ -36,5 +36,14 @@ class DwMissions {
 			path="missions\riviere_vls\riviere_vls.sqf";
 			requires=[];
 		};
+		class CanconLegacy {
+			name="Journaliste prisonnier";
+			description="Un journaliste britannique un peu trop zélé est retenu prisonnier par le CSAT dans la ville de Cancon, dans l'attente d'un transfert vers les prisons du continent. Le Royaume-Uni nous demande d'engager nos moyens à proximité afin de récupérer cet homme et de le ramener auprès du commandant, à bord de la FREMM Normandie.";
+			type="takeoff";
+			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_V_Cancon' >> 'position')";
+			playable=1;
+			path="missions\cancon\cancon_legacy.sqf";
+			requires=[];
+		};
 	};
 };
