@@ -45,5 +45,14 @@ class DwMissions {
 			path="missions\cancon\cancon_legacy.sqf";
 			requires=[];
 		};
+		class OrNoir {
+			name="Opération Or Noir";
+			description="Suite à des problèmes d'approvisionnement, le CSAT semble être en pénurie de carburant pour ses véhicules. La seule réserve restante à l'heure actuelle est stockée dans les réservoirs de l'ancienne centrale électrique du Port. Détruire ces réservoirs mettrait sérieusement en difficulté le CSAT, l'obligeant à restreindre encore davantage ses mouvements.";
+			type="destroy";
+			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_L_powerplant' >> 'position')";
+			playable=1;
+			path="missions\ornoir\ornoir.sqf";
+			requires=[];
+		};
 	};
 };
