@@ -1,5 +1,6 @@
 //dynamic group
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+["Preload"] call BIS_fnc_arsenal;
 
 // Waiting for internal stuff
 waitUntil { !isNil "DW_MISSION_REINIT" };
