@@ -1,4 +1,4 @@
-//exec: server
+//loc: server
 //instance: unique
 
 if(false) exitWith {systemChat "Not implemented yet"};
