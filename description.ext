@@ -8,6 +8,9 @@ class CfgSounds {
 	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
 };
 
+//DW engine missions
+#include "DwMissions.hpp"
+
 class CfgFunctions {
 	class GSRI {
 		class liberty {
@@ -48,6 +51,30 @@ class CfgFunctions {
 		};
 		class legacy {
 			class getDocument {};
+		};
+	};
+	class DW {
+		class dw_server {
+			class loadMissionState {};
+			class saveMissionState {};
+			class switchReinitValue {};
+			class markerCreation {};
+		};
+		class dw_engine {
+			class launchMainMission {};
+			class showGlobalMissionError {};
+		};
+		class dw_client {
+			class showLocalMissionError {};
+		};
+		class dw_populate {
+			class populateZone {};
+			class populateMilitaryTowers {};
+			class populateMilitaryQG {};
+			class populateMilitaryWatchTowers {};
+			class populateSheds {};
+			class populateSolarTowers {};
+			class populatePatrols {};
 		};
 	};
 };
@@ -110,4 +137,38 @@ class CfgNotifications
 	{
 		description = $STR_GSRI_heliFRIES;
 	};
+
+	// Todo clean tout ça
+	class MissionEngineError
+    {
+        title = "Erreur mission";
+        iconPicture = "\a3\Ui_f\data\GUI\Cfg\hints\voice_ca.paa";
+        description = "%1";
+        color[] = {1,0,0,1};
+        duration = 5;
+    };
+	class MissionEngineFobUnlock
+    {
+        title = "Le FOB %1 est déverrouillé";
+		iconPicture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa";
+        description = "Remplissez les sous-tâches pour activer ce FOB";
+        color[] = {0,1,0,1};
+        duration = 5;
+    };
+	class MissionEngineFobActive
+    {
+        title = "Le FOB %1 est actif";
+		iconPicture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa";
+        description = "Des missions secondaires seront attribuées dans la région";
+        color[] = {0,1,0,1};
+        duration = 5;
+    };
+	class MissionEngineFobLocked
+    {
+        title = "Le FOB %1 est verrouillé";
+		iconPicture = "\A3\ui_f\data\igui\cfg\simpleTasks\types\use_ca.paa";
+        description = "Réussissez des missions principales pour déverrouiller ce FOB";
+        color[] = {0,1,0,1};
+        duration = 5;
+    };
 };
