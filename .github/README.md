@@ -12,7 +12,7 @@ If you are willing to contribute to this repo, please read carefully the **Contr
 
 The following documents provide additional informations on rules and standards applying to this project :
 
-*   [Licensing of this project](./LICENSE.md)
+*   [Licensing of this project](../LICENSE.md)
 *   [GSRI code of conduct](https://github.com/team-gsri/CodeOfConduct/blob/master/.github/CODE_OF_CONDUCT.md)
 *   [Contributing to this project](./CONTRIBUTING.md)
 
