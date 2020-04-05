@@ -13,13 +13,6 @@ class CfgSounds {
 
 class CfgFunctions {
 	class GSRI {
-		class zeus {
-			class handleRequest {};
-			class zeusSlots {};
-			class zeusRequest {};
-			class zeusRelease {};
-			class zeusHelp {};
-		};
 		class legacy {
 			class getDocument {};
 		};
