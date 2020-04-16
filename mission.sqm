@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1279;
+		nextID=1283;
 	};
 	class Camera
 	{
-		pos[]={3756.0408,71.922371,3183.5654};
-		dir[]={-0.17421897,-0.63775194,0.75029713};
-		up[]={-0.14424857,0.77024347,0.62122637};
-		aside[]={0.97409958,-7.4942363e-008,0.22618642};
+		pos[]={11395.104,59.347515,11385.994};
+		dir[]={0.68199599,-0.55143976,0.48052573};
+		up[]={0.45082235,0.83418077,0.31764513};
+		aside[]={0.57600415,-3.0206138e-008,-0.81750572};
 	};
 };
 binarizationWanted=0;
@@ -45,6 +45,7 @@ addons[]=
 	"A3_Characters_F_Exp",
 	"BaBe_EM",
 	"A3_Structures_F_Civ_Camping",
+	"r_unfold",
 	"A3_Structures_F_Items_Documents",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Structures_F_Items_Stationery",
@@ -57,7 +58,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -158,26 +159,32 @@ class AddonsMetaData
 		};
 		class Item15
 		{
+			className="r_unfold";
+			name="r_unfold";
+			author="Rallen";
+		};
+		class Item16
+		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item17
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item18
 		{
 			className="A3_Props_F_Jets";
 			name="Arma 3 Jets - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item19
 		{
 			className="VSM_ACU_Config";
 			name="VSM_ACU_Config";
@@ -11271,7 +11278,7 @@ class Mission
 					name="zeus_3";
 					id=1260;
 					type="ModuleCurator_F";
-					atlOffset=5.3907299;
+					atlOffset=6.4323502;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11404,6 +11411,25 @@ class Mission
 					{
 						class Attribute0
 						{
+							property="CustomShipNumber3";
+							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
 							property="CustomShipNameTexture0";
 							expression="([_this, 'Land_Destroyer_01_hull_05_F'] call bis_fnc_destroyer01GetShipPart) setObjectTextureGlobal [0, _value];";
 							class Value
@@ -11417,11 +11443,11 @@ class Mission
 											"STRING"
 										};
 									};
-									value="images\normandie.paa";
+									value="";
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="CustomShipFlagTexture0";
 							expression="([_this, 'ShipFlag_US_F'] call bis_fnc_destroyer01GetShipPart) setFlagTexture _value;";
@@ -11436,11 +11462,11 @@ class Mission
 											"STRING"
 										};
 									};
-									value="images\flag_fr.paa";
+									value="";
 								};
 							};
 						};
-						class Attribute2
+						class Attribute3
 						{
 							property="CustomShipNumber1";
 							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 0] spawn bis_fnc_destroyer01InitHullNumbers;";
@@ -11455,11 +11481,11 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=6;
+									value=0;
 								};
 							};
 						};
-						class Attribute3
+						class Attribute4
 						{
 							property="CustomShipNumber2";
 							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 1] spawn bis_fnc_destroyer01InitHullNumbers;";
@@ -11474,14 +11500,14 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=5;
+									value=0;
 								};
 							};
 						};
-						class Attribute4
+						class Attribute5
 						{
-							property="CustomShipNumber3";
-							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+							property="GSRI_FREMM_selectTemplate";
+							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
 							class Value
 							{
 								class data
@@ -11490,14 +11516,14 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1;
+									value="GSRI_Normandie";
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=6;
 					};
 				};
 				class Item1
@@ -11543,7 +11569,7 @@ class Mission
 				};
 			};
 			id=1;
-			atlOffset=73.646759;
+			atlOffset=72.686295;
 		};
 		class Item3
 		{
@@ -11794,7 +11820,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -11960,7 +11986,7 @@ class Mission
 					};
 					id=1187;
 					type="B_Soldier_F";
-					atlOffset=5.7220459e-006;
+					atlOffset=6.1988831e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12106,7 +12132,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -12419,7 +12445,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -12662,7 +12688,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -12730,10 +12756,9 @@ class Mission
 		{
 			dataType="Layer";
 			name="Hangar";
-			state=1;
 			class Entities
 			{
-				items=21;
+				items=17;
 				class Item0
 				{
 					dataType="Object";
@@ -12912,7 +12937,7 @@ class Mission
 					side="West";
 					class Entities
 					{
-						items=2;
+						items=1;
 						class Item0
 						{
 							dataType="Object";
@@ -12982,81 +13007,12 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={11462.344,7.9565935,11407.758};
-								angles[]={0,5.1868229,0};
-							};
-							side="West";
-							flags=1;
-							class Attributes
-							{
-								init="call{this disableAI ""ALL""; if (local this) then {[this,""LEAN_ON_TABLE"",""ASIS"",help2] call BIS_fnc_ambientAnim}}";
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="U_B_GEN_Soldier_F";
-										isBackpack=0;
-									};
-									headgear="H_MilCap_blue";
-								};
-							};
-							id=1251;
-							type="B_Soldier_F";
-							atlOffset=78.05291;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="Male06ENG";
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"SCALAR"
-												};
-											};
-											value=1;
-										};
-									};
-								};
-								nAttributes=2;
-							};
-						};
 					};
 					class Attributes
 					{
 					};
 					id=1238;
-					atlOffset=96.5;
+					atlOffset=2.3387756;
 				};
 				class Item7
 				{
@@ -13220,73 +13176,9 @@ class Mission
 					type="Land_DischargeStick_01_F";
 					atlOffset=78.031662;
 				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={11461.656,9.0056305,11407.922};
-						angles[]={0,4.6375294,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=1253;
-					type="Land_File2_F";
-					atlOffset=0.97916222;
-				};
-				class Item18
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={11462.281,8.8798065,11407.737};
-						angles[]={0,5.4265423,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-						name="help2";
-					};
-					id=1252;
-					type="babe_helper";
-				};
-				class Item19
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={11460.269,8.6874466,11409.382};
-						angles[]={0,2.2689281,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=1213;
-					type="Land_DeckTractor_01_F";
-					atlOffset=78.099403;
-				};
-				class Item20
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={11461.887,9.03442,11408.352};
-						angles[]={0,1.8712735,0};
-					};
-					side="Empty";
-					class Attributes
-					{
-					};
-					id=1254;
-					type="Land_Map_F";
-					atlOffset=1.0073719;
-				};
 			};
 			id=1257;
-			atlOffset=0.71992397;
+			atlOffset=0.76655483;
 		};
 		class Item8
 		{
