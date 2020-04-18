@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1283;
+		nextID=1287;
 	};
 	class Camera
 	{
@@ -35,6 +35,7 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Boat_F_Destroyer_Destroyer_01",
 	"A3_Structures_F_Civ_InfoBoards",
+	"asr_ai3_skills",
 	"A3_Weapons_F",
 	"gsri_headgear",
 	"VSM_G2_Config",
@@ -11411,8 +11412,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="CustomShipNumber3";
-							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+							property="GSRI_FREMM_selectTemplate";
+							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
 							class Value
 							{
 								class data
@@ -11421,10 +11422,10 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0;
+									value="GSRI_Normandie";
 								};
 							};
 						};
@@ -11506,8 +11507,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="GSRI_FREMM_selectTemplate";
-							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
+							property="CustomShipNumber3";
+							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
 							class Value
 							{
 								class data
@@ -11516,10 +11517,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="GSRI_Normandie";
+									value=0;
 								};
 							};
 						};
@@ -11814,7 +11815,7 @@ class Mission
 					};
 					id=1184;
 					type="B_medic_F";
-					atlOffset=4.6730042e-005;
+					atlOffset=4.7206879e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11986,7 +11987,7 @@ class Mission
 					};
 					id=1187;
 					type="B_Soldier_F";
-					atlOffset=6.1988831e-006;
+					atlOffset=5.7220459e-006;
 					class CustomAttributes
 					{
 						class Attribute0
