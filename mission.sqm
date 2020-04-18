@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1287;
+		nextID=1291;
 	};
 	class Camera
 	{
@@ -35,7 +35,6 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Boat_F_Destroyer_Destroyer_01",
 	"A3_Structures_F_Civ_InfoBoards",
-	"asr_ai3_skills",
 	"A3_Weapons_F",
 	"gsri_headgear",
 	"VSM_G2_Config",
@@ -46,7 +45,6 @@ addons[]=
 	"A3_Characters_F_Exp",
 	"BaBe_EM",
 	"A3_Structures_F_Civ_Camping",
-	"r_unfold",
 	"A3_Structures_F_Items_Documents",
 	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Structures_F_Items_Stationery",
@@ -59,7 +57,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=19;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -160,32 +158,26 @@ class AddonsMetaData
 		};
 		class Item15
 		{
-			className="r_unfold";
-			name="r_unfold";
-			author="Rallen";
-		};
-		class Item16
-		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item16
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item17
 		{
 			className="A3_Props_F_Jets";
 			name="Arma 3 Jets - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item18
 		{
 			className="VSM_ACU_Config";
 			name="VSM_ACU_Config";
@@ -11412,8 +11404,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="GSRI_FREMM_selectTemplate";
-							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
+							property="CustomShipNumber3";
+							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
 							class Value
 							{
 								class data
@@ -11422,10 +11414,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="GSRI_Normandie";
+									value=0;
 								};
 							};
 						};
@@ -11507,8 +11499,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="CustomShipNumber3";
-							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+							property="GSRI_FREMM_selectTemplate";
+							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
 							class Value
 							{
 								class data
@@ -11517,10 +11509,10 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0;
+									value="GSRI_Normandie";
 								};
 							};
 						};
@@ -11815,7 +11807,7 @@ class Mission
 					};
 					id=1184;
 					type="B_medic_F";
-					atlOffset=4.7206879e-005;
+					atlOffset=4.6730042e-005;
 					class CustomAttributes
 					{
 						class Attribute0
