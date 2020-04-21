@@ -1,0 +1,71 @@
+name: integration
+
+on:
+  push:
+    branches: [ master ]
+    # FIXME addd path constraint after #27 fixed
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout sources
+      uses: actions/checkout@v2
+      
+    - name: Update mission name
+      shell: pwsh
+      run: (Get-Content ${env:GITHUB_WORKSPACE}/mission.sqm -Raw) -replace 'briefingName="[^"]*";',"briefingName=`"[GSRI] Orion-${env:GITHUB_RUN_NUMBER}`";" | Set-Content ${env:GITHUB_WORKSPACE}/mission.sqm
+
+    - name: Binarize mission
+      uses: docker://arwynfr/armake2:alpine
+      with:
+        entrypoint: /usr/bin/armake2
+        args: rapify /github/workspace/CONT_Orion.Malden/mission.sqm /github/workspace/CONT_Orion.Malden/mission.bin
+
+    - name: Delete unrapified file
+      run: rm CONT_Orion.Malden/mission.sqm
+
+    - name: Rename binarized file
+      run: mv CONT_Orion.Malden/mission.bin CONT_Orion.Malden/mission.sqm
+
+    - name: Pack mission
+      uses: docker://arwynfr/armake2:alpine
+      with:
+        entrypoint: /usr/bin/armake2
+        args: pack /github/workspace/CONT_Orion.Malden /github/workspace/CONT_Orion.Malden.pbo        
+    
+    - name: Stop server
+      uses: appleboy/ssh-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        envs: GITHUB_TOKEN
+        script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList C:\Arma3\Stop-ArmaInstance.ps1 -Name gsri.argon"
+          
+    - name: Copy stack file
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        source: "CONT_Orion.Malden.pbo"
+        target: "C:/Arma3/master/mpmissions/CONT_Orion_${{ GITHUB_REF }}.Malden.pbo"
+        overwrite: true
+
+    - name: Restart server
+      uses: appleboy/ssh-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        envs: GITHUB_TOKEN
+        script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList C:\Arma3\Start-ArmaInstance.ps1 -Name gsri.argon"
+        
