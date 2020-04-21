@@ -18,7 +18,7 @@ jobs:
       
     - name: Update mission name
       shell: pwsh
-      run: (Get-Content mission.sqm -Raw) -replace 'briefingName="[^"]*";',"briefingName=`"[GSRI] Orion-${env:GITHUB_RUN_NUMBER}`";" | Set-Content mission.sqm
+      run: (Get-Content CONT_Orion.Malden/mission.sqm -Raw) -replace 'briefingName="[^"]*";',"briefingName=`"[GSRI] Orion-${env:GITHUB_RUN_NUMBER}`";" | Set-Content CONT_Orion.Malden/mission.sqm
 
     - name: Binarize mission
       uses: docker://arwynfr/armake2:alpine
