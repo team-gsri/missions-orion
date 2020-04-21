@@ -3,7 +3,8 @@ name: integration
 on:
   push:
     branches: [ master ]
-    # FIXME addd path constraint after #27 fixed
+    paths:
+      - CONT_Orion.Malden/**
   pull_request:
     branches: [ master ]
 
