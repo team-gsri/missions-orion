@@ -44,7 +44,7 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList C:\Arma3\Stop-ArmaInstance.ps1 -Name gsri.argon"
+        script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList """"C:\Arma3\Stop-ArmaInstance.ps1 -Name gsri.argon"""""
           
     - name: Copy mission file to server
       uses: appleboy/scp-action@master
@@ -62,5 +62,5 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList C:\Arma3\Start-ArmaInstance.ps1 -Name gsri.argon"
+        script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList """"C:\Arma3\Start-ArmaInstance.ps1 -Name gsri.argon"""""
        
