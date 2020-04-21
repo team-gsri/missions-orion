@@ -37,7 +37,7 @@ jobs:
       with:
         entrypoint: /usr/bin/armake2
         args: pack /github/workspace/CONT_Orion.Malden /github/workspace/CONT_Orion.Malden.pbo        
-    
+
     - name: Stop server
       uses: appleboy/ssh-action@master
       with:
@@ -45,7 +45,8 @@ jobs:
         username: ${{ secrets. SSH_LOGIN }}
         key: ${{ secrets.SSH_KEY }}
         script: Start-Process -Verb RunAs powershell '-File C:\Arma3\Stop-ArmaInstance.ps1 gsri.argon'
-          
+        if: github.event_name == 'push'
+
     - name: Copy mission file to server
       uses: appleboy/scp-action@master
       with:
@@ -55,6 +56,7 @@ jobs:
         source: "CONT_Orion.Malden.pbo"
         target: "C:/Arma3/master/mpmissions/CONT_Orion_${{ github.ref }}.Malden.pbo"
         overwrite: true
+        if: github.event_name == 'push'
 
     - name: Restart server
       uses: appleboy/ssh-action@master
@@ -63,4 +65,5 @@ jobs:
         username: ${{ secrets. SSH_LOGIN }}
         key: ${{ secrets.SSH_KEY }}
         script: Start-Process -Verb RunAs powershell '-Command Get-ScheduledTask gsri.argon | Start-ScheduledTask'
+        if: github.event_name == 'push'
        
