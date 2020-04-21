@@ -40,13 +40,10 @@ jobs:
     
     - name: Stop server
       uses: appleboy/ssh-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        envs: GITHUB_TOKEN
         script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList C:\Arma3\Stop-ArmaInstance.ps1 -Name gsri.argon"
           
     - name: Copy mission file to server
@@ -61,12 +58,9 @@ jobs:
 
     - name: Restart server
       uses: appleboy/ssh-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        envs: GITHUB_TOKEN
         script: powershell -Command "Start-Process PowerShell -Verb RunAs -ArgumentList C:\Arma3\Start-ArmaInstance.ps1 -Name gsri.argon"
        
