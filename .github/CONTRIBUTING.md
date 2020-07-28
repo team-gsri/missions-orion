@@ -2,16 +2,6 @@
 
 ***Note:** This document extends and **overrides** the [GSRI Standard Contribution Guide](https://github.com/team-gsri/.github/blob/master/CONTRIBUTING.md).*
 
-## Specific branching instructions
-
-**Opening a pull request to master is limited to code owners.**
-
-Like all GSRI repositories, development must be done on a separate branch forked from master. However, merging code must be done through a pull request to **dev** branch.
-
-Pull requests to dev branch are reviewed by code owners after continuous build checks passed. Once merged, a mission file is continuously build and deployed to a test server. The mission is then eventually tested on the server by the unit. If the version has positive feedback, we will merge on master.
-
-Pull requests bypassing the dev branch will be force closed.
-
 ## Specific code writing instructions
 
 There are two ways of contributing to this repository source code :
