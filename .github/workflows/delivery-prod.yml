@@ -47,5 +47,5 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_KEY }}
         with:
           localPath: CONT_Orion.Malden.pbo
-          remotePath: ${{ secrets.ARMA3_PATH }}/mpmissions/CONT_Orion_dev.Malden.pbo
-          instanceName: ${{ secrets.ARMA3_INSTANCE_DEV }}
+          remotePath: ${{ secrets.ARMA3_PATH }}/mpmissions/CONT_Orion.Malden.pbo
+          instanceName: ${{ secrets.ARMA3_INSTANCE_PROD }}
