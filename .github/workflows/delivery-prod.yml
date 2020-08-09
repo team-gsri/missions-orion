@@ -33,7 +33,7 @@ jobs:
           asset_name: CONT_Orion.Malden.pbo
           asset_content_type: application/octet-stream
 
-      - name: Publish mission to Xeron
+      - name: Publish mission to prod server
         uses: team-gsri/actions-deploy-mission@master
         env:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOSTS_KEYS }}

@@ -23,7 +23,7 @@ jobs:
           name: mission-pbo
           path: CONT_Orion.Malden.pbo
 
-      - name: Publish mission to Xeron
+      - name: Publish mission to dev server
         uses: team-gsri/actions-deploy-mission@master
         env:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOSTS_KEYS }}
