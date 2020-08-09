@@ -1,0 +1,51 @@
+name: delivery-prod
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  publish-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v2
+
+      - name: Lint sources
+        uses: arma-actions/sqflint@v1.0
+        with:
+          args: --exit e --directory CONT_Orion.Malden
+
+      - name: Make mission pbo
+        uses: team-gsri/actions-make-pbo@master
+        with:
+          mission: CONT_Orion.Malden
+          briefingName: "[GSRI] Orion ${{ github.event.tag_name }}"
+
+      - name: Upload pbo to github
+        uses: actions/upload-artifact@v2
+        with:
+          name: mission-pbo
+          path: CONT_Orion.Malden.pbo
+
+      - name: Upload pbo as release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.upload_url }}
+          asset_path: CONT_Orion.Malden.pbo
+          asset_name: CONT_Orion.Malden.pbo
+          asset_content_type: application/octet-stream
+
+      - name: Publish mission to Xeron
+        uses: team-gsri/actions-deploy-mission@master
+        env:
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_HOSTS_KEYS }}
+          SSH_HOSTNAME: ${{ secrets.SSH_ARMA3_HOSTNAME }}
+          SSH_USERNAME: ${{ secrets.SSH_ARMA3_USERNAME }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        with:
+          localPath: CONT_Orion.Malden.pbo
+          remotePath: ${{ secrets.ARMA3_PATH }}/mpmissions/CONT_Orion.Malden.pbo
+          instanceName: ${{ secrets.ARMA3_INSTANCE_PROD }}
