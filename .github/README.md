@@ -12,8 +12,9 @@ If you are willing to contribute to this repo, please read carefully the **Contr
 
 The following documents provide additional informations on rules and standards applying to this project :
 
-*   [Licensing of this project](../LICENSE.md)
-*   [GSRI code of conduct](https://github.com/team-gsri/CodeOfConduct/blob/master/.github/CODE_OF_CONDUCT.md)
-*   [Contributing to this project](./CONTRIBUTING.md)
+*   [MIT License](../LICENSE.md)
+*   [GSRI code of conduct](https://github.com/team-gsri/.github/blob/master/CODE_OF_CONDUCT.md)
+*   [GSRI Orion contribution guide](./CONTRIBUTING.md)
+*   [GSRI security policy](https://github.com/team-gsri/.github/blob/master/SECURITY.md)
 
 You can ask for support on [our discord server](https://discord.gg/bhMn4jd)
