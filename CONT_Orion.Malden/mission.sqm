@@ -13976,7 +13976,6 @@ class Mission
 					class Attributes
 					{
 						lock="UNLOCKED";
-						init="call{this animateDoor [""Door_L"", 1]; this animateDoor [""Door_R"", 1];}";
 					};
 					id=1214;
 					type="B_Heli_Transport_01_F";
