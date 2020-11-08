@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1303;
+		nextID=1307;
 	};
 	class Camera
 	{
-		pos[]={11483.864,24.625057,11399.853};
-		dir[]={-0.69299597,-0.49976346,0.5198493};
-		up[]={-0.39995396,0.86602336,0.30002102};
-		aside[]={0.60013735,3.4074183e-006,0.80003786};
+		pos[]={11461.876,11.677464,11405.985};
+		dir[]={0.14280446,-0.1847024,0.97248483};
+		up[]={0.026875572,0.98271799,0.18303289};
+		aside[]={0.98949802,5.9762478e-006,-0.14529783};
 	};
 };
 binarizationWanted=0;
@@ -11446,8 +11446,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="GSRI_FREMM_selectTemplate";
-							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
+							property="CustomShipNumber3";
+							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
 							class Value
 							{
 								class data
@@ -11456,10 +11456,10 @@ class Mission
 									{
 										type[]=
 										{
-											"STRING"
+											"SCALAR"
 										};
 									};
-									value="GSRI_Normandie";
+									value=0;
 								};
 							};
 						};
@@ -11541,8 +11541,8 @@ class Mission
 						};
 						class Attribute5
 						{
-							property="CustomShipNumber3";
-							expression="[([_this, 'Land_Destroyer_01_hull_01_F'] call bis_fnc_destroyer01GetShipPart), _value, 2] spawn bis_fnc_destroyer01InitHullNumbers;";
+							property="GSRI_FREMM_selectTemplate";
+							expression="_this setVariable ['GSRI_FREMM_selectTemplate',_value];";
 							class Value
 							{
 								class data
@@ -11551,10 +11551,10 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0;
+									value="GSRI_Normandie";
 								};
 							};
 						};
@@ -13961,7 +13961,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Hangar";
-			state=1;
 			class Entities
 			{
 				items=17;
@@ -13970,18 +13969,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={11462.173,10.158272,11417.367};
+						position[]={11462.173,10.158119,11417.367};
 						angles[]={0,5.4105206,0};
 					};
 					side="Empty";
 					class Attributes
 					{
-						lock="LOCKED";
+						lock="UNLOCKED";
 						init="call{this animateDoor [""Door_L"", 1]; this animateDoor [""Door_R"", 1];}";
 					};
 					id=1214;
 					type="B_Heli_Transport_01_F";
-					atlOffset=78.036148;
+					atlOffset=78.035995;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14218,7 +14217,7 @@ class Mission
 					{
 					};
 					id=1238;
-					atlOffset=96.5;
+					atlOffset=2.3387756;
 				};
 				class Item7
 				{
@@ -14384,7 +14383,7 @@ class Mission
 				};
 			};
 			id=1257;
-			atlOffset=78.847694;
+			atlOffset=0.76655483;
 		};
 		class Item5
 		{
