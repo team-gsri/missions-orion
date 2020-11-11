@@ -15,7 +15,7 @@ jobs:
         uses: team-gsri/actions-make-pbo@master
         with:
           mission: CONT_Orion.Malden
-          briefingName: "[GSRI] Orion (dev)"
+          briefingName: "[GSRI] Orion dev-${{ github.sha }}"
 
       - name: Upload pbo to github
         uses: actions/upload-artifact@v2
