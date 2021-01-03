@@ -1,0 +1,1 @@
+call GSRI_fnc_getEmpty;
