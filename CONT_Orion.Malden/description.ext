@@ -23,6 +23,7 @@ class CfgFunctions {
 		};
 		class dw_populate {
 			class populateZone {};
+			class populateHelipads {};
 			class populateMilitaryTowers {};
 			class populateMilitaryQG {};
 			class populateMilitaryWatchTowers {};
