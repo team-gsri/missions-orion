@@ -9,7 +9,7 @@ _debug=false;
 					_cargoGrp= _veh select 3;
 	_pos = [_mkr,false] call SHK_pos;									
 	_pad = createVehicle ["Land_HelipadEmpty_F", _pos, [], 0, "NONE"]; 
-		if (_debug) then {0= [_mkr,_counter,"Unload Pad",(getpos _pad)] call EOS_debug;};
+		if (_debug) then { [_mkr,_counter,"Unload Pad",(getpos _pad)] call EOS_debug;};
 		
 {_x allowFleeing 0} forEach units _grp;		
 {_x allowFleeing 0} forEach units _cargoGrp;
@@ -25,7 +25,7 @@ _wp1 setWaypointStatements ["true", "(vehicle this) LAND 'GET IN';"];
 		
 		waitUntil{sleep 0.2; {_x in _vehicle} count units _cargoGrp == 0};				
 						if (_debug) then {hint "Transport unloaded";};	
-						0 = [_cargoGrp,_mkr] call eos_fnc_taskpatrol;
+						[_cargoGrp,_mkr] call eos_fnc_taskpatrol;
 						
 _wp2 = _grp addWaypoint [[0,0,0], 0];  
 _wp2 setWaypointSpeed "FULL";  

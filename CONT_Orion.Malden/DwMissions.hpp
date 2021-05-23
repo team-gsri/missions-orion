@@ -7,7 +7,7 @@ class DwMissions {
 			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_V_Lolisse' >> 'position')";
 			playable=1;
 			path="missions\lolisse\lolisse1.sqf";
-			requires=[];
+			requires[]={};
 		};
 		class LarcheLegacy {
 			name="Noeud de télécommunications";
@@ -16,7 +16,7 @@ class DwMissions {
 			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_C_Larche' >> 'position')";
 			playable=1;
 			path="missions\larche\larche_legacy.sqf";
-			requires=[];
+			requires[]={};
 		};
 		class ArudyLegacy {
 			name="Fichier d'inventaire";
@@ -25,7 +25,7 @@ class DwMissions {
 			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_V_Arudy' >> 'position')";
 			playable=1;
 			path="missions\arudy\arudy_legacy.sqf";
-			requires=[];
+			requires[]={};
 		};
 		class LaRiviereVLS {
 			name="Frappe Venator";
@@ -34,7 +34,7 @@ class DwMissions {
 			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_L_LaRiviereH' >> 'position')";
 			playable=1;
 			path="missions\riviere_vls\riviere_vls.sqf";
-			requires=[];
+			requires[]={};
 		};
 		class CanconLegacy {
 			name="Journaliste prisonnier";
@@ -43,7 +43,7 @@ class DwMissions {
 			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_V_Cancon' >> 'position')";
 			playable=1;
 			path="missions\cancon\cancon_legacy.sqf";
-			requires=[];
+			requires[]={};
 		};
 		class OrNoir {
 			name="Opération Or Noir";
@@ -52,7 +52,7 @@ class DwMissions {
 			location="getArray(configFile >> 'CfgWorlds' >> worldName >> 'Names' >> 'Malden_L_powerplant' >> 'position')";
 			playable=1;
 			path="missions\ornoir\ornoir.sqf";
-			requires=[];
+			requires[]={};
 		};
 	};
 };

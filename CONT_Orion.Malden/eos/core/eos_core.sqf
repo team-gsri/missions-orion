@@ -73,13 +73,13 @@ if (!(getmarkercolor _mkr == "colorblack"))then {
 								if (_aMin > 0) then {
 										_aGroup=[_mPos,_aSize,_faction,_side] call EOS_fnc_spawngroup;	
 										if (!surfaceiswater _mPos) then {
-											0=[_mPos,units _aGroup,_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
+											[_mPos,units _aGroup,_mkrX,0,[0,20],true,true] call shk_fnc_fillhouse;
 												}else{
-												0 = [_aGroup,_mkr] call EOS_fnc_taskpatrol;
+												 [_aGroup,_mkr] call EOS_fnc_taskpatrol;
 													};
 												_aGrp set [count _aGrp,_aGroup];
-												0=[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
-if (_debug) then {PLAYER SIDECHAT (format ["Spawned House Patrol: %1",_counter]);0= [_mkr,_counter,"House Patrol",getpos (leader _aGroup)] call EOS_debug};
+												[_aGroup,"INFskill"] call eos_fnc_grouphandlers;
+if (_debug) then {PLAYER SIDECHAT (format ["Spawned House Patrol: %1",_counter]); [_mkr,_counter,"House Patrol",getpos (leader _aGroup)] call EOS_debug};
 												};
 		};
 		
@@ -96,11 +96,11 @@ if (_debug) then {PLAYER SIDECHAT (format ["Spawned House Patrol: %1",_counter])
 							if (_bMin > 0) then {	
 									_pos = [_mkr,true] call SHK_pos;			
 									_bGroup=[_pos,_bSize,_faction,_side] call EOS_fnc_spawngroup;
-										0 = [_bGroup,_mkr] call EOS_fnc_taskpatrol;
+										 [_bGroup,_mkr] call EOS_fnc_taskpatrol;
 										_bGrp set [count _bGrp,_bGroup];
 										
-										0=[_bGroup,"INFskill"] call eos_fnc_grouphandlers;
-if (_debug) then {PLAYER SIDECHAT (format ["Spawned Patrol: %1",_counter]);0= [_mkr,_counter,"patrol",getpos (leader _bGroup)] call EOS_debug};
+										[_bGroup,"INFskill"] call eos_fnc_grouphandlers;
+if (_debug) then {PLAYER SIDECHAT (format ["Spawned Patrol: %1",_counter]); [_mkr,_counter,"patrol",getpos (leader _bGroup)] call EOS_debug};
 												};
 		};	
 	
@@ -113,14 +113,14 @@ if (_debug) then {PLAYER SIDECHAT (format ["Spawned Patrol: %1",_counter]);0= [_
 	
 					_cGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
 				if ((_cSize select 0) > 0) then{
-						0=[(_cGroup select 0),_cSize,(_cGroup select 2),_faction,_cargoType] call eos_fnc_setcargo;
+						[(_cGroup select 0),_cSize,(_cGroup select 2),_faction,_cargoType] call eos_fnc_setcargo;
 						};
 						
-							0=[(_cGroup select 2),"LIGskill"] call eos_fnc_grouphandlers;
-								0 = [(_cGroup select 2),_mkr] call EOS_fnc_taskpatrol;
+							[(_cGroup select 2),"LIGskill"] call eos_fnc_grouphandlers;
+								 [(_cGroup select 2),_mkr] call EOS_fnc_taskpatrol;
 								_cGrp set [count _cGrp,_cGroup];			
 								
-if (_debug) then {player sidechat format ["Light Vehicle:%1 - r%2",_counter,_cGrps];0= [_mkr,_counter,"Light Veh",(getpos leader (_cGroup select 2))] call EOS_debug};
+if (_debug) then {player sidechat format ["Light Vehicle:%1 - r%2",_counter,_cGrps]; [_mkr,_counter,"Light Veh",(getpos leader (_cGroup select 2))] call EOS_debug};
 		};	
 		
 //SPAWN ARMOURED VEHICLES
@@ -132,11 +132,11 @@ if (_debug) then {player sidechat format ["Light Vehicle:%1 - r%2",_counter,_cGr
 			
 					_dGroup=[_newpos,_side,_faction,_vehType]call EOS_fnc_spawnvehicle;
 					
-						0=[(_dGroup select 2),"ARMskill"] call eos_fnc_grouphandlers;
-						0 = [(_dGroup select 2),_mkr] call EOS_fnc_taskpatrol;
+						[(_dGroup select 2),"ARMskill"] call eos_fnc_grouphandlers;
+						 [(_dGroup select 2),_mkr] call EOS_fnc_taskpatrol;
 							_dGrp set [count _dGrp,_dGroup];
 							
-if (_debug) then {player sidechat format ["Armoured:%1 - r%2",_counter,_dGrps];0= [_mkr,_counter,"Armour",(getpos leader (_dGroup select 2))] call EOS_debug};
+if (_debug) then {player sidechat format ["Armoured:%1 - r%2",_counter,_dGrps]; [_mkr,_counter,"Armour",(getpos leader (_dGroup select 2))] call EOS_debug};
 		};
 		
 //SPAWN STATIC PLACEMENTS
@@ -148,10 +148,10 @@ if (_debug) then {player sidechat format ["Armoured:%1 - r%2",_counter,_dGrps];0
 			
 					_eGroup=[_newpos,_side,_faction,5]call EOS_fnc_spawnvehicle;
 		
-						0=[(_eGroup select 2),"STAskill"] call eos_fnc_grouphandlers;
+						[(_eGroup select 2),"STAskill"] call eos_fnc_grouphandlers;
 							_eGrp set [count _eGrp,_eGroup];
 							
-if (_debug) then {player sidechat format ["Static:%1",_counter];0= [_mkr,_counter,"Static",(getpos leader (_eGroup select 2))] call EOS_debug};
+if (_debug) then {player sidechat format ["Static:%1",_counter]; [_mkr,_counter,"Static",(getpos leader (_eGroup select 2))] call EOS_debug};
 		};	
 		
 //SPAWN CHOPPER
@@ -165,8 +165,8 @@ if (_debug) then {player sidechat format ["Static:%1",_counter];0= [_mkr,_counte
 						
 if ((_fSize select 0) > 0) then {
 	_cargoGrp = createGroup _side;
-		0=[(_fGroup select 0),_fSize,_cargoGrp,_faction,9] call eos_fnc_setcargo;
-			0=[_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
+		[(_fGroup select 0),_fSize,_cargoGrp,_faction,9] call eos_fnc_setcargo;
+			[_cargoGrp,"INFskill"] call eos_fnc_grouphandlers;
 		_fGroup set [count _fGroup,_cargoGrp];
 			null = [_mkr,_fGroup,_counter] execvm "eos\functions\TransportUnload_fnc.sqf";
 				}else{
@@ -174,9 +174,9 @@ if ((_fSize select 0) > 0) then {
 					_wp1 setWaypointSpeed "FULL";  
 					_wp1 setWaypointType "SAD";};
 			
-						0=[(_fGroup select 2),"AIRskill"] call eos_fnc_grouphandlers;
+						[(_fGroup select 2),"AIRskill"] call eos_fnc_grouphandlers;
 			
-if (_debug) then {player sidechat format ["Chopper:%1",_counter];0= [_mkr,_counter,"Chopper",(getpos leader (_fGroup select 2))] call EOS_debug};
+if (_debug) then {player sidechat format ["Chopper:%1",_counter]; [_mkr,_counter,"Chopper",(getpos leader (_fGroup select 2))] call EOS_debug};
 			};	
 
 
