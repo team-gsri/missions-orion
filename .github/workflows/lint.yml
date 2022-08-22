@@ -15,8 +15,3 @@ jobs:
         uses: arma-actions/sqflint@v1.0
         with:
           args: --exit e --directory CONT_Orion.Malden
-
-      - name: Make mission pbo
-        uses: team-gsri/actions-make-pbo@master
-        with:
-          mission: CONT_Orion.Malden
