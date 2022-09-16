@@ -12,7 +12,7 @@ jobs:
     steps:
 
       - name: Checkout files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       - name: Get new version
         id: new-version
@@ -29,7 +29,7 @@ jobs:
           target: ./
 
       - name: Upload PBO to github
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: mission
           path: ./*.pbo
