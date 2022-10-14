@@ -12,7 +12,7 @@ jobs:
     steps:
 
       - name: Make mission pbo
-        uses: team-gsri/actions-arma-tools/release-mission@0.0.3
+        uses: team-gsri/actions-arma-tools/release-mission@v0
         with:
           missionName: Orion
           source: ./CONT_Orion.Malden
