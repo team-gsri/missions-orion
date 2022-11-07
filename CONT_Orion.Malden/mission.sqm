@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11395.86,20.202415,11466.478};
-		dir[]={-0.74962729,-0.14218146,0.64658207};
-		up[]={-0.1077227,0.98982394,0.092915513};
-		aside[]={0.65322524,-1.5879341e-006,0.75732678};
+		pos[]={11371.347,49.377453,11591.682};
+		dir[]={0.21968336,-0.26171714,-0.93993843};
+		up[]={0.059577867,0.96512306,-0.25491527};
+		aside[]={-0.97388959,-1.0541444e-006,-0.22761583};
 	};
 };
 binarizationWanted=0;
@@ -39,7 +39,6 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Characters_F",
 	"A3_Boat_F_Destroyer_Destroyer_01",
-	"A3_Structures_F_Civ_InfoBoards",
 	"asr_ai3_skills",
 	"gsri_equipment",
 	"A3_Air_F_Beta_Heli_Transport_01",
@@ -102,56 +101,56 @@ class AddonsMetaData
 		};
 		class Item5
 		{
-			className="A3_Structures_F";
-			name="Arma 3 - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item6
-		{
 			className="gsri_equipment";
 			name="gsri_equipment";
 			author="www.gsri.team";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item7
 		{
 			className="kat_misc";
 			name="KAT - KAT - MISC";
 			author="Katalam";
 			url="https://github.com/Tomcat-SG/KAM";
 		};
-		class Item9
+		class Item8
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item9
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item10
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item11
 		{
 			className="BaBe_EM";
 			name="BaBe_EM";
+		};
+		class Item12
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item13
 		{
@@ -9015,7 +9014,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=3;
+				items=2;
 				class Item0
 				{
 					dataType="Object";
@@ -9116,41 +9115,6 @@ class Mission
 					};
 				};
 				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={11442.094,7.075911,11431.059};
-						angles[]={0,3.804713,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						init="call{this allowDamage false; this addAction[""<t color='#af1313'>HALO jump</t>"", ""ATM_airdrop\atm_airdrop.sqf""]}";
-					};
-					id=1203;
-					type="Land_InfoStand_V2_F";
-					atlOffset=9.727478e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ace_isMedicalFacility";
-							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item2
 				{
 					dataType="Group";
 					side="West";
