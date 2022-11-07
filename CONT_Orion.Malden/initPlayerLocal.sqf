@@ -2,6 +2,13 @@
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 ["Preload"] call BIS_fnc_arsenal;
 
+{ missionNamespace setVariable [_x, true] } forEach [
+	"BIS_respSpecAllowFreeCamera",
+	"BIS_respSpecAllow3PPCamera",
+	"BIS_respSpecShowHeader",
+	"BIS_respSpecLists"
+];
+
 // Waiting for internal stuff
 waitUntil { !isNil "DW_MISSION_REINIT" };
 
